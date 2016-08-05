@@ -1,0 +1,16 @@
+<section class="create-post-section">
+  <h2>Create a New Post</h2>
+  <form>
+  <span>Post Title:</span><input type="text" name="postTitle" placeholder="Add your title here"><br>
+  <span>Post Content</span><input type="text" name="postContent" placeholder="Have something to say? Type it!"><br>
+  <input type="submit">
+  </form>
+</section>
+<section class="post-history-section">
+  <div class="old-post" ng-repeat="post in posts">
+    <span class="old-post-title">{{post.node.title}}</span><span class="old-post-date">{{post.node.createdAt}}</span>
+    <p class="old-post-content">
+      {{post.node.content}}
+    </p>
+  </div>
+</section>
