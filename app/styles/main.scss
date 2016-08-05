@@ -1,89 +1,105 @@
-// bower:scss
-// endbower
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+* {
+vertical-align: baseline;
+padding: 0;
+outline: 0;
+border: 0;
+margin: 0;
+font-size: 100%;
+font-weight: normal;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-decoration: none;
+background: transparent;
+box-sizing: border-box;
 }
 
 body {
-  padding: 0;
+line-height: 1;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+ol,
+ul {
+list-style: none;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+blockquote,
+q {
+quotes: none;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+html, {
+height: 100%;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+span {
+color: inherit;
+font: inherit;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+button::-moz-focus-inner {
+padding: 0;
+border: 0
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
 
-  p + h4 {
-    margin-top: 28px;
-  }
+/* CLUB HAPPENINGS
+--------------------------- */
+
+.club-happenings {
+  background: #5e8cbd;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+.ch-title-container {
+  display: inline-block;
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.ch-title {
+  display: inline-block;
+  line-height: 40px;
+  margin-bottom: 27px;
+  color: #fff;
+}
+
+.pc-button-container {
+  display: inline-block;
+  float: right;
+  padding-top: 8px;
+}
+
+
+.pc-button-title {
+  width: 137px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  line-height: 15px;
+  vertical-align: top;
+  margin-right: 16px;
+  color: #fff;
+  display: inline-block;
+}
+
+
+
+.ch-post {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  margin-right: 4.5%;
+  background: #fff;
+  padding: 32px;
+}
+
+.ch-post:last-child {
+  margin: 0;
+}
+
+.ch-date {
+  color: #5e8cbd;
+  margin-bottom: 25px;
+  display: inline-block;
 }

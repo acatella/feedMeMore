@@ -21,7 +21,11 @@
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
 
     allPosts.getPosts().success(function(data) {
-      $scope.posts = data;
-      console.log(data);
+      var posts = data.data.viewer.allPosts.edges;
+      console.log(posts);
+
+      $scope.posts = posts;
     });
+
+
 });
