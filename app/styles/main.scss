@@ -125,6 +125,7 @@ border: 0
   background: #e5e8ed;
   border-radius: .3rem;
   margin: 0 auto;
+  box-shadow: 4px 4px 0 #34567a;
 }
 
 .create-post-section h2 {
@@ -227,7 +228,7 @@ form .form-list .form-item {
   width: 300px;
   background: #34567a;
   color: #fff;
-  padding: 10px;  
+  padding: 10px;
   text-align: left;
   transition: all 0.3s;
 }
