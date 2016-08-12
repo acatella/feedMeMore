@@ -4,13 +4,13 @@
     <form>
       <ul class="form-list">
         <li class="form-item">
-          <label>Title:</label><input type="text" name="postTitle" placeholder="What do you want to call your post?">
+          <label>Title:</label><input id="$new_post_title" type="text" name="postTitle" placeholder="What do you want to call your post?">
         </li>
         <li class="form-item">
-          <label>Content:</label><textarea rows="14" class="content-field" type="text" name="postContent" placeholder="What do you want to say?"></textarea>
+          <label>Content:</label><textarea rows="14" id="$new_post_content" class="content-field" type="text" name="postContent" placeholder="What do you want to say?"></textarea>
         </li>
       </ul>
-      <input class="submit-button" type="submit">
+      <input class="submit-button" type="submit" ng-click="createPost()">
     </form>
   </div>
   <div class="scroll-alert">
