@@ -41,8 +41,15 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       //Define title and content variables to be passed as paramaters
       var title = document.getElementById('$new_post_title').value;
       var content = document.getElementById('$new_post_content').value;
+      var submitButton = angular.element(document.querySelector('#submit_button'));
 
+      submitButton.removeClass('pulse');
+      
       allPosts.createPost(title,content).then(function(result) {
+
+        // Animates submit button when post successfully submits
+        submitButton.addClass('pulse');
+
 
         // Format data in the way the HTML expects to receive it
         var newPost = {
@@ -59,6 +66,9 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         // Clears title and content containers on successful post submission
         document.getElementById('$new_post_title').value='';
         document.getElementById('$new_post_content').value='';
+
+
+
 
       });
     };
