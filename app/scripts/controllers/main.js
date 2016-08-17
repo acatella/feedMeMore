@@ -58,6 +58,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       });
     };
 
+    // Delete post from admin view and database
     $scope.deletePost = function(postID) {
 
       allPosts.deletePost(postID).success(function(result) {
@@ -70,5 +71,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         }
       });
     };
+
+    // Displays and hides old post content on click
 
 });

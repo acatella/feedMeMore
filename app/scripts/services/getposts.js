@@ -55,7 +55,7 @@ angular.module('feedMeMoreApp')
 
       },
 
-      nextThreePosts: function(id) {
+      nextThreePosts: function() {
         var data = {
             query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } } }  } } ',
             variables: ""
