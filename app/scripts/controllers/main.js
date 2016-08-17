@@ -27,10 +27,16 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       $scope.posts = posts;
     });
 
+    // Queries db and return array of three posts to show on home page
+    allPosts.getThreePosts().success(function(data) {
+      var threePosts = data.data.viewer.allPosts.edges;
+      $scope.threePosts = threePosts;
+    });
+
     // Add a new post to the db, takes title and content as paramaters
     $scope.createPost = function() {
 
-      //Define title and content variables
+      //Define title and content variables to be passed as paramaters
       var title = document.getElementById('$new_post_title').value;
       var content = document.getElementById('$new_post_content').value;
 
@@ -45,7 +51,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
           }
         };
 
-        console.log(newPost);
         // Updates array of posts to reflect new posts in real time
         $scope.posts.unshift(newPost);
       });
