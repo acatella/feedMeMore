@@ -55,6 +55,11 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
         // Updates array of posts to reflect new posts in real time
         $scope.posts.unshift(newPost);
+
+        // Clears title and content containers on successful post submission
+        document.getElementById('$new_post_title').value='';
+        document.getElementById('$new_post_content').value='';
+
       });
     };
 
