@@ -53,6 +53,33 @@ angular.module('feedMeMoreApp')
             console.log(result);
         });
 
+      },
+
+      nextThreePosts: function(id) {
+        var data = {
+            query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } } }  } } ',
+            variables: ""
+        };
+
+        return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+            console.log("That was easy!");
+            console.log(result);
+        });
+      },
+
+      deletePost: function(postID) {
+
+        var data = {
+            query: 'mutation deletePostQuery($input_0: _DeletePostInput!){ deletePost(input: $input_0){ changedPost { id createdAt modifiedAt title content  } } } ',
+            variables: {"input_0": {"id" : postID}}
+        };
+
+        return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+            console.log("That was easy!");
+            console.log(result);
+
+            return result;
+        });
       }
 
     };

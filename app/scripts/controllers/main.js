@@ -33,6 +33,8 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       $scope.threePosts = threePosts;
     });
 
+    //should be able to pass threePosts[2].node.id as parameter to pagination function
+
     // Add a new post to the db, takes title and content as paramaters
     $scope.createPost = function() {
 
@@ -53,6 +55,19 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
         // Updates array of posts to reflect new posts in real time
         $scope.posts.unshift(newPost);
+      });
+    };
+
+    $scope.deletePost = function(postID) {
+
+      allPosts.deletePost(postID).success(function(result) {
+
+        for (var i=0; i<$scope.posts.length; i++) {
+          if ($scope.posts[i].node.id === result.data.deletePost.changedPost.id) {
+            $scope.posts.splice(i,1);
+            break;
+          }
+        }
       });
     };
 
