@@ -30,7 +30,7 @@ angular.module('feedMeMoreApp')
       getPosts: function () {
 
         var data = {
-            query: 'query { viewer{ allPosts { edges { node { id createdAt modifiedAt title content } } }  } } ',
+            query: 'query { viewer{ allPosts(first: 20000) { edges { node { id createdAt modifiedAt title content } } }  } } ',
             variables: ""
         };
 
@@ -44,14 +44,14 @@ angular.module('feedMeMoreApp')
       getThreePosts: function () {
 
         var data = {
-            query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } cursor } pageInfo { hasNextPage hasPreviousPage count } } } } ',
+            query: 'query { viewer{ allPosts(first: 20000) { edges { node { id createdAt modifiedAt title content } cursor } pageInfo { hasNextPage hasPreviousPage count } } } } ',
             variables: ""
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
             console.log("That was easy!");
             console.log(result);
-
+            
             return result;
         });
 

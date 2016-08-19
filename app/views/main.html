@@ -8,6 +8,6 @@
       </p>
     </div>
   </div>
-  <button ng-click="getNextPosts()">Next</button><br>
-  <button ng-click="getPreviousPosts()">Last</button>
+  <button ng-click="showNextThree()" ng-show="hasNextPage">Next</button><br>
+  <button ng-click="showPreviousThree()" ng-show="hasPreviousPage">Last</button>
 </section>

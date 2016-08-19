@@ -19,35 +19,115 @@
 
 
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
+
+    // Global variables
+    var threePosts = [];
+    $scope.hasNextPage = false;
+    $scope.hasPreviousPage = false;
+    var pageNumber = 0;
+
+    // Methods to determine if previous and next buttons display
+    // function checkNextPage(pageInfo) {
+    //     if (pageInfo.hasNextPage) {
+    //       $scope.hasNextPage = true;
+    //     }
+    //     else {
+    //       $scope.hasNextPage = false;
+    //     }
+    // }
+    //
+    // function checkPreviousPage() {
+    //   if (pageNumber > 0) {
+    //     $scope.hasPreviousPage = true;
+    //   }
+    //   else {
+    //     $scope.hasPreviousPage = false;
+    //   }
+    // }
+
+    // Methods to determine when to show prev/next buttons
+    function showNextButton(posts) {
+      if (pageNumber+2 >= posts.length) {
+        $scope.hasNextPage = false;
+      } else {
+        $scope.hasNextPage = true;
+      }
+    };
+
+    function showPreviousButton(posts) {
+      if (pageNumber <= 0) {
+        $scope.hasPreviousPage = false;
+      } else {
+        $scope.hasPreviousPage = true;
+      }
+    };
+
     // Queries db and returns array of all posts in descending chronological order
     allPosts.getPosts().success(function(data) {
       var posts = data.data.viewer.allPosts.edges;
       console.log(posts);
 
       $scope.posts = posts;
+      $scope.threePosts = $scope.posts.slice(pageNumber,pageNumber+3);
+      showPreviousButton($scope.posts);
+      showNextButton($scope.posts);
     });
 
-    // Queries db and return array of three posts to show on home page
-    allPosts.getThreePosts().success(function(data) {
-      var threePosts = data.data.viewer.allPosts.edges;
-      $scope.threePosts = threePosts;
-    });
-
-    // Returns next three posts on button click
-    $scope.getNextPosts = function() {
-
-      allPosts.getNextPosts($scope.threePosts[$scope.threePosts.length-1].cursor).success(function(result) {
-        $scope.threePosts = result.data.viewer.allPosts.edges;
-      });
+    // Shows next posts
+    $scope.showNextThree = function() {
+      pageNumber += 3;
+      if (pageNumber + 2 > $scope.posts.length-1) {
+          $scope.threePosts = $scope.posts.slice(pageNumber);
+      } else {
+          $scope.threePosts = $scope.posts.slice(pageNumber,pageNumber+3);
+      }
+      showPreviousButton($scope.posts);
+      showNextButton($scope.posts);
     };
 
-    // Returns previous three posts on button click
-    $scope.getPreviousPosts = function () {
+    // Shows previous posts
+    $scope.showPreviousThree = function() {
+      pageNumber -= 3;
+      if (pageNumber - 2 < 0) {
+        $scope.threePosts = $scope.posts.slice(0,3);
+      } else {
+        $scope.threePosts = $scope.posts.slice(pageNumber,pageNumber+3);
+      }
+      showPreviousButton($scope.posts);
+      showNextButton($scope.posts);
+    };
 
-      allPosts.getPreviousPosts($scope.threePosts[0].cursor).success(function(result) {
-          $scope.threePosts = result.data.viewer.allPosts.edges;
-      });
-    };    
+    // Queries db and return array of three posts to show on home page
+    // allPosts.getThreePosts().success(function(data) {
+    //   threePosts = data.data.viewer.allPosts.edges;
+    //   $scope.threePosts = threePosts;
+    //   checkNextPage(data.data.viewer.allPosts.pageInfo);
+    //   checkPreviousPage(data.data.viewer.allPosts.pageInfo);
+    // });
+
+    // Returns next three posts on button click
+    // $scope.getNextPosts = function() {
+    //
+    //   allPosts.getNextPosts($scope.threePosts[$scope.threePosts.length-1].cursor).success(function(data) {
+    //     pageNumber += 1;
+    //     $scope.threePosts = data.data.viewer.allPosts.edges;
+    //     console.log($scope.threePosts);
+    //     checkNextPage(data.data.viewer.allPosts.pageInfo);
+    //     checkPreviousPage(data.data.viewer.allPosts.pageInfo);
+    //   });
+    // };
+
+    // Returns previous three posts on button click
+    // $scope.getPreviousPosts = function () {
+    //   pageNumber -= 1;
+    //   allPosts.getPreviousPosts($scope.threePosts[0].cursor).success(function(data) {
+    //       $scope.threePosts = data.data.viewer.allPosts.edges;
+    //       console.log($scope.threePosts);
+    //       data.data.viewer.allPosts.pageInfo.hasNextPage = true;
+    //       checkNextPage(data.data.viewer.allPosts.pageInfo);
+    //       checkPreviousPage(data.data.viewer.allPosts.pageInfo);
+    //   });
+    // };
 
     // Add a new post to the db, takes title and content as paramaters
     $scope.createPost = function() {
