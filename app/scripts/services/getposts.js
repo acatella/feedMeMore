@@ -44,26 +44,46 @@ angular.module('feedMeMoreApp')
       getThreePosts: function () {
 
         var data = {
-            query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } } }  } } ',
+            query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } cursor } pageInfo { hasNextPage hasPreviousPage count } } } } ',
             variables: ""
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
             console.log("That was easy!");
             console.log(result);
+
+            return result;
         });
 
       },
 
-      nextThreePosts: function() {
+      getNextPosts: function(cursor) {
+
         var data = {
-            query: 'query { viewer{ allPosts(first: 3) { edges { node { id createdAt modifiedAt title content } } }  } } ',
-            variables: ""
+            query: 'query getNextPosts ($cursor: String){ viewer{ allPosts(first: 3, after: $cursor) { edges { node { id createdAt modifiedAt title content } cursor } pageInfo { hasNextPage hasPreviousPage count } } } } ',
+            variables: {"cursor": cursor}
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
             console.log("That was easy!");
             console.log(result);
+
+            return result;
+        });
+      },
+
+      getPreviousPosts: function(cursor) {
+
+        var data = {
+            query: 'query getNextPosts ($cursor: String){ viewer{ allPosts(last: 3, before: $cursor) { edges { node { id createdAt modifiedAt title content } cursor } pageInfo { hasNextPage hasPreviousPage count } } } } ',
+            variables: {"cursor": cursor}
+        };
+
+        return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+            console.log("That was easy!");
+            console.log(result);
+
+            return result;
         });
       },
 

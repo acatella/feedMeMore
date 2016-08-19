@@ -33,7 +33,21 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       $scope.threePosts = threePosts;
     });
 
-    //should be able to pass threePosts[2].node.id as parameter to pagination function
+    // Returns next three posts on button click
+    $scope.getNextPosts = function() {
+
+      allPosts.getNextPosts($scope.threePosts[$scope.threePosts.length-1].cursor).success(function(result) {
+        $scope.threePosts = result.data.viewer.allPosts.edges;
+      });
+    };
+
+    // Returns previous three posts on button click
+    $scope.getPreviousPosts = function () {
+
+      allPosts.getPreviousPosts($scope.threePosts[0].cursor).success(function(result) {
+          $scope.threePosts = result.data.viewer.allPosts.edges;
+      });
+    };    
 
     // Add a new post to the db, takes title and content as paramaters
     $scope.createPost = function() {
@@ -44,7 +58,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       var submitButton = angular.element(document.querySelector('#submit_button'));
 
       submitButton.removeClass('pulse');
-      
+
       allPosts.createPost(title,content).then(function(result) {
 
         // Animates submit button when post successfully submits
@@ -87,6 +101,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       });
     };
 
-    // Displays and hides old post content on click
+
 
 });
