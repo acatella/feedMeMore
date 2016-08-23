@@ -30,34 +30,34 @@
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-click="toggleMenus(aboutMenu)" ng-click="toggleMenus($index)">About</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="aboutMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/club-history">Club History</a></li>
-              <li class="top-nav-item"><a ng-href="#/club-rules">Club Rules</a></li>
-              <li class="top-nav-item"><a ng-href="#/board">Board of Directors</a></li>
-              <li class="top-nav-item"><a ng-href="#/staff">Staff</a></li>
+              <li class="top-nav-item"><a ng-href="#/club-history" ng-click="aboutMenu.visibility = false">Club History</a></li>
+              <li class="top-nav-item"><a ng-href="#/club-rules" ng-click="aboutMenu.visibility = false">Club Rules</a></li>
+              <li class="top-nav-item"><a ng-href="#/board" ng-click="aboutMenu.visibility = false">Board of Directors</a></li>
+              <li class="top-nav-item"><a ng-href="#/staff" ng-click="aboutMenu.visibility = false">Staff</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(aquaticsMenu)">Aquatics</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="aquaticsMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/swim-team">Swim Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/adult-swim">Adult Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/waterpolo">Water Polo</a></li>
-              <li class="top-nav-item"><a ng-href="#swim-lessons">Lessons</a></li>
+              <li class="top-nav-item"><a ng-href="#/swim-team" ng-click="aquaticsMenu.visibility = false">Swim Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/adult-swim" ng-click="aquaticsMenu.visibility = false">Adult Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/waterpolo" ng-click="aquaticsMenu.visibility = false">Water Polo</a></li>
+              <li class="top-nav-item"><a ng-href="#swim-lessons" ng-click="aquaticsMenu.visibility = false">Lessons</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(tennisMenu)">Tennis</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="tennisMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/tennis-team">Tennis Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/adult-tennis">Adult Tennis</a></li>
-              <li class="top-nav-item"><a ng-href="#/tennis-lessons">Lessons</a></li>
+              <li class="top-nav-item"><a ng-href="#/tennis-team" ng-click="tennisMenu.visibility = false">Tennis Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/adult-tennis" ng-click="tennisMenu.visibility = false">Adult Tennis</a></li>
+              <li class="top-nav-item"><a ng-href="#/tennis-lessons" ng-click="tennisMenu.visibility = false">Lessons</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(eventsMenu)">Events</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="eventsMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/calendar">Calendar</a></li>
-              <li class="top-nav-item"><a ng-href="#events">Club Events</a></li>
+              <li class="top-nav-item"><a ng-href="#/calendar" ng-click="eventsMenu.visibility = false">Calendar</a></li>
+              <li class="top-nav-item"><a ng-href="#events" ng-click="eventsMenu.visibility = false">Club Events</a></li>
             </ul>
           </div>
           <div class="top-nav-section">

@@ -187,9 +187,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     };
 
     // Hides all menus when menu is clicked
-    $scope.toggleMenus = function(menuItem) {
-      console.log(menuItem);
-      console.log($scope.aboutMenu);
+    $scope.toggleMenus = function(menuItem) {      
       if (menuItem.visibility === true ) {
         menuItem.visibility = false;
         return;
