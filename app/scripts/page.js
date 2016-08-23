@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+  
   // Hides menu dropdown when document is clicked outside of open dropdown
   $(document).on('click',function(e) {
     $('.top-nav-dropdown').removeClass('top-nav-visible');
@@ -17,6 +17,7 @@ $(document).ready(function() {
     if (dropdown.hasClass('top-nav-visible')) {
       dropdown.removeClass('top-nav-visible')
       topNavSection.removeClass('rotate-caret');
+      console.log('hi jquery');
     }
 
     else {

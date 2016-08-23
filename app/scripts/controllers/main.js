@@ -21,7 +21,7 @@
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
 
     // Global variables
-    var threePosts = [];
+    // var threePosts = [];
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
     var pageNumber = 0;
@@ -52,15 +52,15 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       } else {
         $scope.hasNextPage = true;
       }
-    };
+    }
 
-    function showPreviousButton(posts) {
+    function showPreviousButton() {
       if (pageNumber <= 0) {
         $scope.hasPreviousPage = false;
       } else {
         $scope.hasPreviousPage = true;
       }
-    };
+    }
 
     // Queries db and returns array of all posts in descending chronological order
     allPosts.getPosts().success(function(data) {
@@ -181,8 +181,4 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       });
     };
 
-    // Top Nav Click Events for Mobile and Desktop
-    $scope.toggleNavMenu = function($index){
-      
-    }
 });
