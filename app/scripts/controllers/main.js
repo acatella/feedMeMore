@@ -187,7 +187,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     };
 
     // Hides all menus when menu is clicked
-    $scope.toggleMenus = function(menuItem) {      
+    $scope.toggleMenus = function(menuItem) {
       if (menuItem.visibility === true ) {
         menuItem.visibility = false;
         return;
@@ -201,6 +201,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
         menuItem.visibility = true;
       }
-    };
+    };    
 
 });
