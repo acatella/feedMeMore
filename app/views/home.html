@@ -44,6 +44,14 @@
               {{post.node.content}}
             </p>
           </div>
+          <div class="arrow-containers">
+            <a ng-click="showPreviousThree()" ng-show="hasPreviousPage" class="previous-button-container"><span class="white-arrow"></span></a>
+            <a ng-click="showNextThree()" ng-show="hasNextPage" class="next-button-container"><span class="white-arrow white-arrow-forward"></span></a>
+            <div class="clearfix">
+
+            </div>
+          </div>
+
         </div>
       </section>
       <section class="club-activities">
