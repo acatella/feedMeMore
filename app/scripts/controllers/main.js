@@ -181,6 +181,8 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       });
     };
 
-
-
+    // Top Nav Click Events for Mobile and Desktop
+    $scope.toggleNavMenu = function($index){
+      
+    }
 });

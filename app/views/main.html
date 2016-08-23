@@ -1,13 +1,12 @@
 <section class="club-happenings">
   <div class="ch-content">
     <div class="ch-post" ng-repeat="post in threePosts">
-      <h1>{{post.node.title}}</h4>
+      <h4 class=ch-title>{{post.node.title}}</h4>
       <span class="ch-date">{{post.node.createdAt}}</span>
       <p class="hero-text ch-post-content">
         {{post.node.content}}
       </p>
     </div>
-  </div>
   <button ng-click="showNextThree()" ng-show="hasNextPage">Next</button><br>
   <button ng-click="showPreviousThree()" ng-show="hasPreviousPage">Last</button>
 </section>

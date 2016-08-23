@@ -1,0 +1,447 @@
+/* RESPONSIVE STYLE FOR VRSTC SITE by Afi C. Clark */
+
+
+/* GENERAL STYLE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 650px) {
+  .sub-nav-item {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}
+
+@media (max-width: 940px) {
+  .private-lessons .left-col,
+  .private-lessons .right-col {
+    width: 100%;
+  }
+
+  .private-lessons table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  .private-lessons table {
+    width: 100%;
+  }
+}
+
+
+/* HOME PAGE
+-------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1050px) {
+  .about {
+    width: 100%;
+    border-bottom: 2px solid #cfd6dc;
+    border-right: none;
+  }
+
+  .calendar-plugin {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+
+  .spacer {
+    height: 870px; /* this will need to change based on final height of calendar plugin */
+  }
+}
+
+@media (max-width: 930px) {
+  .ch-post {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+
+  .ch-post:last-child {
+    margin: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .ca-info {
+    width: 60%;
+  }
+
+  .quick-links {
+    width: 38%;
+  }
+
+  .img-container {
+    display: none;
+  }
+
+  .ca-info-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .splash-img {
+    height: 100%;
+  }
+
+  .calendar-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    top: 0;
+    left: 0;
+  }
+
+  .about {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .ca-info {
+    padding-right: 5%;
+    width: 100%;
+    border-right: none;
+  }
+
+  .quick-links {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .pc-button-container {
+    float: none;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .pc-button-title {
+    text-align: left;
+    margin-right: 0;
+  }
+}
+
+/* SWIM TEAM PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .swim-team-info {
+    width: 100%;
+    float: none;
+    margin:0;
+  }
+
+  .coach-photo-container {
+    width: 100%;
+    float: none;
+    margin: 60px auto;
+    display: block;
+  }
+
+  .facebook-embed,
+  .practice-schedule {
+    width: 100%;
+    padding-right: 0;
+    float: none;
+  }
+
+  .facebook-embed {
+    display: block;
+    margin: 0 auto 60px;
+    float: none;
+  }
+
+  .swim-team-records,
+  .forms   {
+    padding-left: 20px;
+    width: 100%;
+    border: none;
+  }
+
+  .swim-team-records {
+    margin-bottom: 30px;
+  }
+
+}
+
+/* SWIM LESSONS PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .swim-lessons-info {
+    width: 100%;
+    float: none;
+  }
+
+  .lesson-sessions {
+    width: 75%;
+    float: none;
+    margin: 60px auto 0;
+  }
+}
+
+@media (max-width: 825px) {
+  .registration-deadlines th {
+    font-size: 12px;
+  }
+
+  .registration-deadlines td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 825px) {
+  .registration-deadlines th,
+  .registration-deadlines td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 614px) {
+  .registration-deadlines th,
+  .registration-deadlines td {
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 680px) {
+  .left-col,
+  .right-col {
+    width: 100%;
+    float: none;
+  }
+
+  .private-lessons p {
+    width: 100%;
+  }
+}
+
+/* CLUB RULES PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  .view-all-button {
+    width: 50%;
+  }
+
+  .club-rules-sub-nav .sub-nav-item {
+      padding-left: 2%;
+      padding-right: 2%;
+  }
+}
+
+/* BOARD PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 702px) {
+  .bio-container {
+    width: 100%;
+  }
+}
+
+/* WATER POLO PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  .polo-forms-records {
+      width: 100%;
+      padding: 0 0 120px;
+      margin-left: 0;
+  }
+
+  .polo-forms,
+  .polo-links {
+    border-left: none;
+    padding: 0;
+  }
+
+  .polo-links {
+    margin: 0;
+    padding-top: 60px;
+  }
+}
+
+/* ADULT TENNIS PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .adult-tennis-info .coach-photo-container {
+    margin: 0 auto;
+    float: none;
+    display: block;
+    width: 75%;
+  }
+}
+
+@media (max-width: 765px) {
+  .times-list,
+  .pricing-list {
+    width: 100%;
+  }
+
+  .pricing-list {
+    margin-top: 30px;
+  }
+
+  .adult-tennis-info .coach-photo-container {
+    width: 100%;
+  }
+}
+
+/* TENNIS LESSONS PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .lesson-sessions {
+    width: 100%;
+  }
+}
+
+/* CLUB HISTORY PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 840px) {
+  .history-content {
+    width: 100%;
+  }
+
+  .club-history .img-container {
+    margin: 60px auto;
+    display: block;
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  .club-history .img-container {
+    width: 100%;
+  }
+}
+
+/* CONTACT PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  .contact-main .left-col,
+  .contact-main .right-col {
+    width: 100%;
+  }
+
+  .contact-main {
+    padding-bottom: 60px;
+  }
+  .mail-links {
+    padding: 60px 0;
+    border: none;
+  }
+
+  .contact-map iframe {
+    height: 350px;
+  }
+}
+
+/* TENNIS TEAM PAGE
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  #tennis-practice-games .right-col {
+    padding-top: 60px;
+  }
+
+}
+
+/* NAV (DESKTOP AND MOBILE)
+-------------------------------------------------------------------------------- */
+
+@media (min-width: 781px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+@media (max-width: 780px) {
+
+  .top-nav {
+    display: none;
+  }
+
+  .mobile-nav-button {
+    display: block;
+  }
+}
+
+/* CLUB EVENTS
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 420px) {
+  .event-sub-nav .sub-nav-item {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+/* FOOTER
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+  .sub-footer-tagline {
+    display: none;
+  }
+
+  .sub-footer-fb-cta {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 880px) {
+  .main-footer .left-col,
+  .main-footer .right-col {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .footer-contact-container {
+    margin-top: 30px;
+  }
+
+  .phone-number {
+    margin-top: 22px;
+  }
+}
+
+/* MEMBERSHIP
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 680px) {
+  .waitlist-button {
+    width: 50%;
+  }
+
+
+/* MEMBERSHIP
+-------------------------------------------------------------------------------- */
+
+@media (max-width: 780px)   {
+  .back-button,
+  .back-button-text {
+    left: 0;
+  }
+
+  .back-button {
+    margin-right: 10px;
+  }
+}

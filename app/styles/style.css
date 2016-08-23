@@ -1,0 +1,1658 @@
+/* STYLESHEET FOR VRSTC SITE by Afi C. Clark */
+
+
+/* KEY
+
+TODO: build FAQ and Basic Info pages for:
+  -Water Polo (if asked for)
+TODO: COPY/info/assets NEEDED:
+  -Water Polo Page
+  -Club History
+  -Staff Page images
+  -Coach email addresses
+  -PDF of waitlists
+  -Splash images:
+    -Pool splash image (full rezzie from facebook page)
+    -Generic splash image
+    -home page splash
+    -tennis splash
+    -water polo splash image
+  -image for pool cues page
+
+text:
+dark blue heading: #34567a
+gray body text:  #76797e
+link blue: #608abc
+
+border:
+gray border: #cfd6dc
+
+backgrounds:
+OLD dark gray bg: #f4f5f7
+dark gray bg: #e5e8ed
+light gray bg: #fbfbfb
+*/
+
+
+/* GENERAL STYLE / RESET
+-------------------------------------------------------------------------------- */
+
+/* FONT
+--------------------------- */
+
+@font-face {
+  font-family: 'Edmondsans';
+  font-style: normal;
+  font-weight: normal;
+  src:url('../../6_fonts/edmondsans-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Edmondsans';
+  font-style: normal;
+  font-weight: bold;
+  src:url('../../6_fonts/edmondsans-bold.otf') format('opentype');
+}
+
+/* RESET
+--------------------------- */
+
+* {
+  vertical-align: baseline;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  background: transparent;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Edmondsans', sans-serif;
+  font-weight: bold;
+}
+body {
+  /*line-height: 1;*/
+}
+
+ol,
+ul {
+  /*list-style: none;*/
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+html, {
+  height: 100%;
+}
+
+span {
+  color: inherit;
+  font: inherit;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0
+}
+
+/* GLOBAL STYLING
+--------------------------- */
+
+.container {
+  max-width: 1400px;
+  min-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.overflow-auto * { /* gets rid of margin push problem w/ absolutely floated section */
+  overflow: auto;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 45px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 28px;
+  margin-bottom: 35px;
+  color: #34567a;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 25px;
+  color: #34567a;
+}
+
+h4 {
+  font-size: 15px;
+  color: #34567a;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 13px;
+  color: #608abc;
+}
+
+a {
+  color: #608abc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.drop-cap {
+  float: left;
+  font-size: 67px;
+  line-height: 67px;
+  color: #5e8cbd;
+  display: inline-block;
+  margin: -8px 5px 0px 0;
+  font-family: serif;
+  font-weight: bold;
+}
+
+.wave-icon {
+  margin-bottom: 35px;
+  display: block;
+  width: 50px;
+  height: 5px;
+  background: url('../../4_assets/visual/wavy-lines-sprite.png');
+  background-position: 0 5px;
+  background-size: 100%;
+  top: 10px;
+}
+
+.wave-icon-white {
+  background-position: 0 0;
+}
+
+.pool-splash {
+  background: url('../../4_assets/visual/vrstc-background-pool.jpg');
+}
+
+.tennis-splash {
+  background: url('../../4_assets/visual/vrstc-background-pool.jpg');
+}
+
+.generic-splash {
+  background: url("../../4_assets/visual/vrstc-background.jpg");
+}
+
+.hero-text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: #76797e;
+}
+
+.button  {
+  padding: 20px 0;
+  border-radius: 30px;
+  border: 1px solid #5d8bbc;
+  color: #5d8bbc;
+  font-size: 16px;
+  width: 265px;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #5d8bbc;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.sub-page-splash {
+  height: 315px;
+  padding-top: 137.5px;
+  text-align: center;
+}
+
+.sub-nav {
+  background: #fbfbfb;
+  border-bottom: 1px solid #cfd6dc;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.sub-nav-item {
+  border-right: 1px solid #cfd6dc;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-left: -4px;
+
+
+  font-size: 13.5px;
+  display: inline-block;
+}
+
+.sub-nav-item:last-child {
+  border-right: none;
+}
+
+.content-container {
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* TABLE STYLE
+--------------------------- */
+
+table {
+  border-collapse: collapse;
+  color: #76797e;
+}
+
+table
+{
+  border: 1px solid #cfd6dc;
+}
+
+tr {
+  border-top:  1px solid #cfd6dc;
+  border-bottom:  1px solid #cfd6dc;
+}
+
+td {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-left: 2.6%;
+  padding-right: 2.6%;
+}
+
+th {
+  padding: 30px 0;
+  text-align: center;
+  background: #f4f5f7;
+  color: #34567a;
+  font-size: 22px;
+}
+
+tr:nth-child(odd) {
+  background: #fbfbfb;
+}
+
+/* HOME PAGE
+-------------------------------------------------------------------------------- */
+
+/* PAGE TITLE AND IMAGE
+--------------------------- */
+
+.splash-img {
+  height: 800px;
+  background: url("../../4_assets/visual/vrstc-background.jpg");
+  color: #fff;
+  position: relative; /* provides anchor for calendar-container */
+}
+
+.title-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 215px 0 185px;
+  text-align: center;
+}
+
+.splash-title {
+  margin: 0 0 15px;
+}
+
+.sub-title {
+  font-size: 12px;
+  margin: 0 30px;
+  text-transform: uppercase;
+  display: inline-block;
+  color: rgba(255,255,255,.9);
+}
+
+.splash-img .wave-icon {
+  vertical-align: top;
+  display: inline-block;
+  margin: 9px 0 0;
+  opacity: .9;
+}
+
+.spacer {
+  height: 390px;
+  background: #dce5eb;
+}
+
+/* CALENDAR
+--------------------------- */
+
+.calendar-container {
+  width: 90%;
+  max-width: 1260px;
+  background: #fff;
+  position: absolute;
+  top:500px;
+  left: 50%;
+  margin-left: -45%;
+  z-index: 1000;
+  box-shadow: 0 0 5px 10px rgba(0,0,0, .02);
+}
+
+.calendar-plugin {
+  width: 60%;
+  height: 600px;
+  float: right;
+  border-left: 2px solid #cfd6dc;
+}
+
+/* ABOUT
+--------------------------- */
+
+.about {
+  width: 40%;
+  display: inline-block;
+  background: #fff;
+  padding: 80px 70px;
+  height: 100%;
+  color: #76797e;
+}
+
+.about h2 {
+  color: #34567a;
+  margin: 0 0 35px;
+}
+
+/* CLUB HAPPENINGS
+--------------------------- */
+
+.club-happenings {
+  background: #5e8cbd;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.ch-title-container {
+  display: inline-block;
+}
+
+.ch-title {
+  display: inline-block;
+  line-height: 40px;
+  margin-bottom: 27px;
+  color: #fff;
+}
+
+.pc-button-container {
+  display: inline-block;
+  float: right;
+  padding-top: 8px;
+}
+
+
+.pc-button-title {
+  width: 137px;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  line-height: 15px;
+  vertical-align: top;
+  margin-right: 16px;
+  color: #fff;
+  display: inline-block;
+}
+
+.pc-button {
+  height: 30px;
+  width: 30px;
+  background: url('../../4_assets/visual/right-chevron-circle.png');
+  background-size: 100% 100%;
+  display: inline-block;
+}
+
+.ch-post {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  margin-right: 4.5%;
+  background: #fff;
+  padding: 32px;
+}
+
+.ch-post:last-child {
+  margin: 0;
+}
+
+.ch-date {
+  color: #5e8cbd;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.clock-icon {
+  background-image: url('../../4_assets/visual/clock-icon.png');
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* CLUB ACTIVITIES
+--------------------------- */
+
+.ca-info {
+  width: 72%;
+  height: 100%;
+  display: inline-block;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 5%;
+  padding-right: 10%;
+  border-right: 2px solid #cfd6dc;
+}
+
+.img-container {
+  display: inline-block;
+  width: 40%;
+}
+
+.img-fpo {
+  background: #ccc;
+  height: 302px;
+  width: 280px;
+  box-shadow: -4% -4% 0 #ecedf1;
+  margin: 15px 0 0 15px;
+}
+
+.thumb {
+  width: 95%;
+  box-shadow: -15px -15px 0 #ecedf1;
+  margin: 15px 0 0 15px;
+}
+
+.img-title  {
+  width: 95%;
+  float: right;
+  text-align: center;
+  margin: 30px auto 0;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 15px;
+  color: #aab2bc;
+  padding: 0 10% 0;
+}
+
+.ca-info-container {
+  width: 50%;
+  display: inline-block;
+  float: right;
+  padding-top: 30px;
+}
+
+.ca-title {
+  margin-bottom: 35px;
+  color: #34567a;
+}
+
+.quick-links {
+  width: 28%;
+  height: 100%;
+  text-align: center;
+  float: right;
+  padding: 160px 20px 0;
+}
+
+.ql-button {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 68%;
+}
+
+.quick-links p {
+  margin-bottom: 24px;
+  color: #76797e;
+  font-size: 12px;
+}
+
+/* SWIM TEAM PAGE
+-------------------------------------------------------------------------------- */
+
+
+/* SWIM TEAM SPLASH
+--------------------------- */
+
+
+
+/* SWIM TEAM ABOUT
+--------------------------- */
+
+.swim-team-about {
+  padding-top: 120px;
+}
+
+.swim-team-info {
+  width: 44%;
+  display: inline-block;
+  float: left;
+  margin-right: 8.5%;
+}
+
+.coach-photo-container {
+  width: 46%;
+  max-width: 525px;
+  display: inline-block;
+  border: 1px solid #cfd6dc;
+  float: right;
+}
+
+.coach-photo-container h3 {
+  display: block;
+  text-align: center;
+  background: #f4f5f7;
+  padding: 30px 0;
+  border-bottom: 1px solid #cfd6dc;
+}
+
+.coach-photo-section {
+  /*padding: 60px 22px 47px;*/
+  padding-top: 60px;
+  padding-bottom: 47px;
+  padding-left: 4%;
+  padding-right: 4%;
+  background: #fbfbfb;
+  text-align: center;
+}
+
+.coach-photo {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 4%;
+  width: 45%;
+}
+
+.coach-photo:last-child {
+  margin-right:0;
+}
+
+.coach-photo-fpo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #f4f5f7;
+}
+
+.coach-photo img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.coach-photo p {
+  text-align: center;
+  color:  #76797e;
+  overflow: hidden;
+  line-height: 18px;
+}
+
+
+/* SWIM TEAM CALENDAR
+--------------------------- */
+
+.swim-team-calendar {
+  margin-top: 120px;
+  height: 400px;
+  background: #fbfbfb;
+  border: 1px solid #cfd6dc;
+}
+
+/* SWIM TEAM PRACTICE SCHEDULE
+--------------------------- */
+
+.practice-schedule {
+  width: 44%;
+  float: left;
+  padding: 120px 0;
+}
+
+.practice-schedule h3 {
+  margin: 25px 0 35px;
+}
+
+.bullet-list {
+  margin: 20px 0;
+  list-style: none;
+}
+
+.bullet-list .bl-item {
+  display: list-item;
+  color: #34567a;
+  list-style-position: inside;
+  margin-left: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.bullet-list .bl-item:before {
+  content: '';
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #34567a;
+  position: absolute;
+  left: 0px;
+  top: 12px;
+}
+
+/* SWIM TEAM FACEBOOK EMBED
+--------------------------- */
+
+.facebook-embed {
+  width: 50%;
+  max-width: 500px;
+  height: 600px;
+  float: right;
+  /*background: #e5e8ed;*/
+  margin-top: 120px;
+}
+
+/* SWIM TEAM FORMS AND RECORDS
+--------------------------- */
+
+.forms-records {
+  padding: 120px 0;
+  background: #f4f5f7;
+}
+
+.forms-records h3 {
+  margin-bottom: 35px;
+}
+
+.swim-team-records {
+  float: left;
+}
+
+.swim-team-records,
+.forms {
+  border-left: 1px solid #cfd6dc;
+  padding: 18px 0 18px 40px;
+  width: 50%;
+  display: inline-block;
+}
+
+.st-button {
+  display: inline-block;
+  background: #5e8cbd;
+  color: #fff;
+  padding: 18px 28px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.st-button:last-child {
+  margin-bottom: 0;
+}
+
+.st-button:hover {
+  background: #fff;
+  border: 1px solid #5e8cbd;
+  color: #5e8cbd;
+}
+
+/* SWIM LESSONS PAGE
+-------------------------------------------------------------------------------- */
+
+/* SWIM LESSONS ABOUT
+--------------------------- */
+
+.swim-lessons-about {
+  padding: 120px 0;
+}
+
+.swim-lessons-info {
+  width: 41%;
+  float: left;
+}
+
+.swim-lessons-info p {
+  margin-bottom: 45px;
+}
+
+.times-list,
+.pricing-list {
+  width: 49%;
+  /*float: left;*/
+  display: inline-block;
+  vertical-align: top;
+}
+
+.times-list {
+  /*margin-right: 1%;*/
+}
+
+.times-list ul,
+.pricing-list ul {
+  margin-left: 10px;
+}
+
+.lesson-sessions {
+  width: 47%;
+  margin-left: 53%;
+}
+
+/* SWIM LESSONS REGISTRATION
+--------------------------- */
+
+.registration {
+  background: #f4f5f7;
+  padding: 120px 0;
+}
+
+.registration-deadlines {
+  width: 100%;
+}
+
+.registration-deadlines tr:nth-child(odd),
+.registration-deadlines th {
+  background: #fbfbfb;
+}
+
+.registration-deadlines tr:nth-child(even) {
+  background: #fff;
+}
+
+.registration-deadlines th {
+  font-size: 16px;
+  text-align: left;
+  padding-left: 2.6%;
+  padding-right: 2.6%;
+}
+
+.registration-deadlines td {
+  padding-left: 2.6%;
+  padding-right: 2.6%;
+}
+
+.registration .bullet-list {
+  margin-bottom: 65px;
+}
+
+.registration h3 {
+  margin-bottom: 30px;
+}
+
+/* SWIM LESSONS CLASSES
+--------------------------- */
+
+.class-levels {
+  padding: 120px 0;
+}
+
+.left-col {
+  width: 45%;
+  margin-right: 9%;
+  float: left;
+}
+
+.right-col {
+  width: 45%;
+  float: left;
+}
+
+.class-container {
+  margin-bottom: 42px;
+}
+
+.class-container h3 {
+  margin-bottom: 30px;
+}
+
+.class-container p {
+  min-height: 120px;
+}
+
+/* SWIM LESSONS PRIVATE LESSONS
+--------------------------- */
+
+.private-lessons {
+  padding: 120px 0;
+  background: #e5e8ed;
+}
+
+.private-lessons p {
+  width: 58%;
+}
+
+/* STAFF PAGE
+-------------------------------------------------------------------------------- */
+
+.staff-section {
+  padding: 120px 0 90px;
+  text-align: center;
+}
+
+.staff-section:nth-child(odd) {
+  background: #e5e8ed;
+}
+
+.staff-section .wave-icon {
+  margin:0 auto 70px auto;
+}
+
+.staff-photo-container {
+  display: inline-block;
+  padding: 0 45px 30px;
+}
+
+.staff-photo-container h4 {
+  margin: 25px 0 15px;
+}
+
+.staff-photo-container h5 {
+
+
+}
+
+.staff-photo-fpo {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  background: #f4f5f7;
+}
+
+/* CLUB RULES PAGE
+-------------------------------------------------------------------------------- */
+
+.rule-block {
+  padding: 120px 0 0;
+}
+
+.rule-block:last-child {
+  padding-bottom: 120px;
+}
+
+.rule-block .content-container {
+  height: 100%;
+}
+
+/* ORDERED LIST STYLE
+--------------------------- */
+
+.order-list {
+  margin: 20px 0;
+  list-style-type: none;
+  margin-left: 0;
+  position: relative; /* to anchor view all div */
+}
+
+.order-list .ol-item {
+  display: list-item;
+  color: #34567a;
+  list-style-position: inside;
+  padding-left: 60px;
+  margin-bottom: 16px;
+  position: relative; /* to anchor bg circle for ol items */
+  font-weight: bold;
+  counter-increment: customlistcounter; /* code to remove '.' */
+}
+
+.ol-item:before { /* code to remove '.' from ol */
+  content: counter(customlistcounter) " ";
+  font-weight: bold;
+  float: left;
+  margin: 6px 33px 0 2px;
+  position: absolute; /* to prevent list # from being affected by li padding */
+  left: 8px; /* to center # in bg circle */
+}
+
+.ol-item:nth-child(n+10):before { /* centers double digit ol numbers */
+  margin-left: -3px;
+}
+
+.order-list {
+  counter-reset: customlistcounter;
+}
+
+.ol-item-bg {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #e5e8ed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+ol.order-list .hidden { /* hides all but set number of rules per section */
+  display: none;
+}
+
+
+
+/* VIEW ALL BUTTON
+--------------------------- */
+
+.view-all {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  background: #fff;
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1));
+  background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1));
+  background: -moz-linear-gradient(to top, rgba(255,255,255,1),rgba(255,255,0,.4));
+  background: linear-gradient(to top, rgba(255,255,255,1),rgba(255,255,0,0));
+}
+
+.view-all-button {
+  margin: 25px auto;
+  padding: 25px 0;
+  width: 500px;
+  background: #e5e8ed;
+  color: #34567a;
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Edmondsans', sans-serif;
+  font-size: 12px;
+}
+
+/* BOARD PAGE
+-------------------------------------------------------------------------------- */
+
+.board-bios {
+  padding: 120px 0 60px;
+}
+
+.bio-container {
+  width: 45%;
+  min-width: 300px;
+  margin-bottom: 46px;
+}
+
+.bio-container:nth-child(odd) {
+  margin-right: 4.5%;
+}
+
+.bio-container h4 {
+  margin-bottom: 5px;
+}
+.bio-container h5  {
+  margin: 0 0 20px;
+}
+
+.bio-container h5 {
+  font-weight: normal;
+}
+
+.bio-container .hero-text {
+  font-size: 12px;
+}
+
+/* GOVERNANCE LINK
+--------------------------- */
+
+.governance {
+  background: #e5e8ed;
+  padding: 60px 0;
+}
+
+.gov-forms {
+  margin: 0 auto;
+  text-align: center;
+}
+/* CLUB HISTORY PAGE
+-------------------------------------------------------------------------------- */
+
+.club-history {
+  padding: 120px 0;
+}
+.history-content {
+  width: 63%;
+  display: inline-block;
+  margin-right: 10%;
+  vertical-align: top;
+}
+
+.club-history .img-container {
+  display: inline-block;
+  width: 20%;
+}
+
+/* ADULT SWIM TEAM PAGE
+-------------------------------------------------------------------------------- */
+
+.adult-practice-schedule {
+  width: 100%;
+  padding-right: 18%;
+}
+
+.adult-forms-records {
+  background: #fff;
+}
+
+.adult-forms {
+  border-left: 1px solid #cfd6dc;
+  padding: 18px 0 18px 40px;
+}
+
+#adult-meet {
+  margin-top: 120px;
+}
+/* WATER POLO PAGE
+-------------------------------------------------------------------------------- */
+
+.polo-splash {
+  background-image: url('../../4_assets/visual/vrstc-background-waterpolo.jpg');
+}
+
+.polo-links {
+  margin-top: 60px;
+}
+
+.game-times {
+  background: #e5e8ed;
+  padding: 120px 0;
+}
+
+.game-times h3 {
+  margin-bottom: 35px;
+}
+
+.game-times .bullet-list {
+  margin-bottom: 60px;
+}
+
+.game-times .view-all {
+  position: relative;
+  background: transparent;
+}
+
+.game-times .view-all-button {
+  margin: 0;
+}
+
+.polo-practice-schedule {
+  width: 60%;
+  padding-right: 18%;
+}
+
+.polo-forms-records {
+  margin-left: 60%;
+}
+
+.polo-view-all-button {
+  background: #5e8cbd;
+  color: #fff;
+}
+
+.polo-view-all-button:hover {
+  background: #fff;
+  color: #5e8cbd;
+  border: 1px solid #5e8cbd;
+}
+
+/* MEMBERSHIP PAGE
+-------------------------------------------------------------------------------- */
+
+
+/* MEMBERSHIP INFO
+--------------------------- */
+
+.member-about {
+  padding: 120px 0 0;
+}
+
+/* FEES & FEE TABLES
+--------------------------- */
+
+.fees {
+  padding: 0 0 120px;
+}
+.fees .fee-table {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.member-fee {
+  margin-right: 20%;
+}
+
+/* WAITLIST BUTTON
+--------------------------- */
+
+.member-about .view-all{
+  position: relative;
+}
+
+.waitlist-button {
+  margin: 25px auto;
+  padding: 25px 0;
+  width: 500px;
+  background: #e5e8ed;
+  color: #34567a;
+  border: none;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Edmondsans', sans-serif;
+  font-size: 12px;
+}
+
+
+/* MEMBERSHIP PAGE
+-------------------------------------------------------------------------------- */
+
+#tennis-practice-games {
+  width: 100%;
+}
+
+/* ADULT TENNIS PAGE
+-------------------------------------------------------------------------------- */
+
+.adult-tennis-info,
+.adult-flights,
+.adult-clinics,
+.cardio-tennis {
+  padding: 120px 0;
+}
+
+.adult-clinics .email {
+  font-size: 15px;
+  margin-right: 3px;
+}
+
+.adult-tennis-time-price {
+  padding-bottom: 120px;
+}
+.adult-tennis-time-price h3 {
+  margin-bottom: 35px;
+}
+
+.adult-tennis-time-price h4 {
+  margin-bottom: 20px;
+}
+.pricing-list p {
+  margin-bottom: 20px;
+}
+
+.adult-tennis-time-price .bullet-list,
+.adult-flights .bullet-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.adult-flights,
+.cardio-tennis {
+  background: #f4f5f7;
+}
+
+.adult-flights h3 {
+  margin-bottom: 15px;
+}
+
+.private-lessons table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.private-lessons td {
+  background: #fff;
+}
+
+.private-lessons h3 {
+  margin-top: 30px;
+}
+
+/* CONTACT PAGE
+-------------------------------------------------------------------------------- */
+
+.contact-main {
+  padding: 120px 0;
+}
+
+.contact-main h3 {
+  margin-bottom: 10px;
+}
+
+.contact-main .hero-text {
+  margin-bottom: 10px;
+}
+
+.contact-map iframe{
+  height: 600px;
+}
+
+.contact-map {
+  padding-bottom: 120px;
+}
+
+/* HEADER AND TOP NAV
+-------------------------------------------------------------------------------- */
+
+
+
+header {
+  height: 75px;
+  background: #fff;
+  padding-left: 4.5%;
+  box-shadow: 0 7px 10px rgba(0,0,0, .04);
+  position: relative;
+  z-index: 1000;
+}
+
+header .logo {
+  display: inline-block;
+  margin-top: 12.5px;
+  vertical-align: top;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+.top-nav-dropdown-button,
+.top-nav-item a {
+  color: #34567a;
+  font-size: 14px;
+}
+
+.top-nav {
+  float:right;
+}
+
+.top-nav-section {
+  position: relative;
+  padding-right: 10px;
+  display: inline-block;
+  transition: background .3s;
+  -moz-transition: background .3s;
+  -webkit-transition: background .3s;
+}
+
+.top-nav-dropdown-button {
+  display: inline-block;
+  height: 75px;
+  padding: 30px 35px 0 20px;
+  position: relative;
+}
+
+.top-nav-dropdown-button:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../../4_assets/visual/down-chevron-blue.png') no-repeat;
+  background-position: 92% 37px;
+  background-size: 12px 6px;
+  -moz-transition: transform .3s;
+  -webkit-transition: transform .3s;
+  transition: transform .3s;
+  transform-origin: 87% 39px;
+}
+
+.rotate-caret .top-nav-dropdown-button:before {
+  -webkit-transform: rotate(180deg);
+ -moz-transform: rotate(180deg);
+ -ms-transform: rotate(180deg);
+ -o-transform: rotate(180deg);
+ transform: rotate(180deg);
+}
+
+
+.top-nav-dropdown {
+  position: absolute;
+  top: 75px;
+  /*left: -9999px;*/
+  z-index: 10000;
+  background: #fff;
+}
+
+.top-nav-item {
+  list-style: none;
+}
+
+.top-nav-item a {
+  display: block;
+  width: 190px;
+  padding: 15px 0 15px 25px;
+  -moz-transition: background .3s;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.top-nav-section:hover .top-nav-dropdown {
+  cursor: pointer;
+}
+
+.top-nav-visible {
+  left: 0;
+}
+
+.top-nav-section:hover {
+  background: #eff2f7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.top-nav-section:hover .top-nav-dropdown-button {
+  text-decoration: none;
+}
+
+.top-nav-item a:hover {
+  background: #eff2f7;
+  text-decoration: none;
+}
+
+.top-nav-section:last-child .top-nav-dropdown-button:before {
+  background: transparent;
+}
+/* MOBILE NAV
+-------------------------------------------------------------------------------- */
+
+.mobile-nav-button {
+  display: none;
+  margin-top: 22.5px;
+  margin-right: 30px;
+  float: right;
+  border-bottom: 17px double #34567a;
+  border-top: 6px solid #34567a;
+  border-radius: 3px;
+  content:"";
+  height: 28px;
+  width: 30px;
+}
+
+.mobile-nav-close {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  color: #34567a;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  left: 15px;
+  top: -15px;
+}
+
+.mobile-nav-close:hover {
+  text-decoration: none;
+}
+.mobile-nav-container {
+  position: relative;
+}
+
+.mobile-nav-button:hover,
+.mobile-nav-close {
+  cursor:pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top:0;
+  right: 0;
+  background: #fff;
+  width: 60%;
+  padding-right: 10%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: right;
+  border-left: 1px solid #cfd6dc;
+  height: 100vh;
+  z-index: 100000;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+}
+
+.mobile-nav-dropdown-button {
+  color: #34567a;
+  font-size: 14px;
+}
+
+.mobile-nav-item a {
+  color: #34567a;
+  font-size: 10px
+}
+
+.mobile-nav-section {
+
+}
+
+.mobile-nav-dropdown-button {
+  display: inline-block;
+  padding: 15px 0;
+  width: 50%;
+}
+
+.mobile-nav-dropdown {
+  width: 70%;
+  display: none;
+
+}
+
+.mobile-nav-item {
+  list-style: none;
+}
+
+.mobile-nav-item a {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 10px 15px 0;
+}
+
+.mobile-nav-visible .mobile-nav-dropdown {
+  display: inline-block
+}
+
+.mobile-nav-section:hover .mobile-nav-dropdown-button {
+  cursor: pointer;
+}
+
+.mobile-nav-item a:hover {
+  background: #eff2f7;
+  text-decoration: none;
+}
+
+/* CLUB EVENTS PAGE
+-------------------------------------------------------------------------------- */
+
+.event-section {
+  padding: 120px 0;
+}
+
+.event-section:nth-child(even) {
+  background: #e5e8ed;
+}
+
+.event-section h3 {
+  margin: 30px 0 15px;
+}
+
+/* FOOTER
+-------------------------------------------------------------------------------- */
+
+section.main-footer {
+  background: #2b4b6f;
+}
+
+section.sub-footer {
+  background: #1e3c60;
+}
+
+.main-footer h4 {
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.main-footer {
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.main-footer .left-col {
+  margin-right: 5%;
+}
+
+.main-footer .hero-text {
+  color: #acb6c0;
+}
+
+.footer-logo {
+  height: 55px;
+  margin-bottom: 45px;
+}
+
+.phone-number {
+  margin: 2px 0 15px;
+}
+
+.main-footer .footer-contact,
+.main-footer .footer-hours {
+  line-height: 25px;
+}
+
+.footer-contact {
+  min-width: 225px;
+}
+
+.sub-footer {
+  padding: 20px 0;
+}
+
+.sub-footer-tagline {
+  width: 60%;
+  border-right: 1px solid #7d8998;
+  color: #7d8998;
+  text-align: right;
+  padding-right: 5%;
+  display: inline-block;
+}
+
+.sub-footer-fb-cta {
+  width: 39%;
+  display: inline-block;
+  padding-left: 5%;
+}
+
+.sub-footer-fb-cta .hero-text {
+  display: inline-block;
+  color: rgba(255,255,255,.8);
+}
+
+.fb-link {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  opacity: .8;
+  vertical-align: top;
+  margin-left: 15px;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.fb-link:hover {
+  height: 35px;
+  width: 35px;
+  margin-left: 10px;
+}
+
+.footer-map iframe {
+  height: 100%;
+  width: 100;
+  border-radius: 3px;
+}
+
+
+.footer-map {
+  display: inline-block;
+  height: 145px;
+  width: 145px;
+}
+
+/* FACEBOOK
+-------------------------------------------------------------------------------- */
+
+iframe {
+  width: 100%;
+}
+
+/* POOL CUES
+-------------------------------------------------------------------------------- */
+
+.pool-cues-container {
+  background: #fdfdfd;
+}
+
+.pool-cues {
+  padding: 60px 0;
+}
+
+.back-button {
+  display: inline-block;
+  position: relative;
+  background: url('../../4_assets/visual/blue-arrow.png');
+  height: 12px;
+  width: 15px;
+  background-size: 100%;
+  margin-bottom: 60px;
+  top: 1px;
+  left: -27px;
+}
+
+.back-button-text {
+  color: #2e85dd;
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  left: -17px;
+}
+
+.back-button-container {
+  display: inline-block;
+}
