@@ -25,6 +25,11 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
     var pageNumber = 0;
+    $scope.aboutMenu = {visibility: false};
+    $scope.aquaticsMenu = {visibility: false};
+    $scope.tennisMenu = {visibility: false};
+    $scope.eventsMenu = {visibility: false};
+    $scope.menus = [$scope.aboutMenu,$scope.aquaticsMenu,$scope.tennisMenu,$scope.eventsMenu];
 
     // Methods to determine if previous and next buttons display
     // function checkNextPage(pageInfo) {
@@ -179,6 +184,25 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
           }
         }
       });
+    };
+
+    // Hides all menus when menu is clicked
+    $scope.toggleMenus = function(menuItem) {
+      console.log(menuItem);
+      console.log($scope.aboutMenu);
+      if (menuItem.visibility === true ) {
+        menuItem.visibility = false;
+        return;
+      }
+
+      else {
+        for (var i=0; i<$scope.menus.length;i++) {
+          console.log($scope.menus[i].visibility);
+          $scope.menus[i].visibility = false;
+        }
+
+        menuItem.visibility = true;
+      }
     };
 
 });

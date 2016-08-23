@@ -28,8 +28,8 @@
         <a class="logo" ng-href="#/index"><img src="../4_assets/visual/vrstc-logomark.png"></a>
         <nav class="top-nav">
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-click="aboutMenuVis = !aboutMenuVis">About</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="aboutMenuVis">
+            <a class="top-nav-dropdown-button" ng-click="toggleMenus(aboutMenu)" ng-click="toggleMenus($index)">About</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="aboutMenu.visibility">
               <li class="top-nav-item"><a ng-href="#/club-history">Club History</a></li>
               <li class="top-nav-item"><a ng-href="#/club-rules">Club Rules</a></li>
               <li class="top-nav-item"><a ng-href="#/board">Board of Directors</a></li>
@@ -37,8 +37,8 @@
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="aquaticsMenuVis = !aquaticsMenuVis">Aquatics</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="aquaticsMenuVis">
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(aquaticsMenu)">Aquatics</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="aquaticsMenu.visibility">
               <li class="top-nav-item"><a ng-href="#/swim-team">Swim Team</a></li>
               <li class="top-nav-item"><a ng-href="#/adult-swim">Adult Team</a></li>
               <li class="top-nav-item"><a ng-href="#/waterpolo">Water Polo</a></li>
@@ -46,16 +46,16 @@
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="tennisMenuVis = !tennisMenuVis">Tennis</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="tennisMenuVis">
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(tennisMenu)">Tennis</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="tennisMenu.visibility">
               <li class="top-nav-item"><a ng-href="#/tennis-team">Tennis Team</a></li>
               <li class="top-nav-item"><a ng-href="#/adult-tennis">Adult Tennis</a></li>
               <li class="top-nav-item"><a ng-href="#/tennis-lessons">Lessons</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="eventsMenuVis = !eventsMenuVis">Events</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="eventsMenuVis">
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(eventsMenu)">Events</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="eventsMenu.visibility">
               <li class="top-nav-item"><a ng-href="#/calendar">Calendar</a></li>
               <li class="top-nav-item"><a ng-href="#events">Club Events</a></li>
             </ul>
@@ -124,7 +124,8 @@
     </script>
 
     <!-- custom js -->
-    <script src="scripts/page.js"></script>
+    <!-- <script src="scripts/page.js"></script> -->
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
