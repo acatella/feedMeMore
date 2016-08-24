@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   // Hides menu dropdown when document is clicked outside of open dropdown
   $(document).on('click',function(e) {
     $('.top-nav-dropdown').removeClass('top-nav-visible');

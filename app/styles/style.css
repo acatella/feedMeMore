@@ -113,6 +113,14 @@ button::-moz-focus-inner {
 /* GLOBAL STYLING
 --------------------------- */
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .container {
   max-width: 1400px;
   min-width: 400px;

@@ -25,11 +25,11 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
     var pageNumber = 0;
-    $scope.aboutMenu = {visibility: false};
-    $scope.aquaticsMenu = {visibility: false};
-    $scope.tennisMenu = {visibility: false};
-    $scope.eventsMenu = {visibility: false};
-    $scope.menus = [$scope.aboutMenu,$scope.aquaticsMenu,$scope.tennisMenu,$scope.eventsMenu];
+    // $scope.aboutMenu = {visibility: true}; 0
+    // $scope.aquaticsMenu = {visibility: false}; 1
+    // $scope.tennisMenu = {visibility: false}; 2
+    // $scope.eventsMenu = {visibility: false}; 3
+    $scope.menus = [ false, false, false, false ];
 
     // Methods to determine if previous and next buttons display
     // function checkNextPage(pageInfo) {
@@ -188,19 +188,34 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Hides all menus when menu is clicked
     $scope.toggleMenus = function(menuItem) {
-      if (menuItem.visibility === true ) {
-        menuItem.visibility = false;
+
+      if ($scope.menus[menuItem] === true && menuItem !== 'closeAll') {
+        $scope.menus[menuItem] = false;
         return;
       }
 
       else {
         for (var i=0; i<$scope.menus.length;i++) {
-          console.log($scope.menus[i].visibility);
-          $scope.menus[i].visibility = false;
+          console.log($scope.menus[i]);
+          $scope.menus[i] = false;
         }
 
-        menuItem.visibility = true;
+        $scope.menus[menuItem] = true;
       }
-    };    
+    };
 
+    // Alters club rules button text and positioning
+    $scope.gpButtonPosition = "absolute";
+    $scope.gpButtonText = "View All Rules";
+    $scope.updateGpButton = function() {
+      if ($scope.gpButtonPosition == "absolute") {
+        $scope.gpButtonPosition = "relative";
+        $scope.gpButtonText = "Hide Rules"
+      }
+      else {
+        $scope.gpButtonPosition = "absolute";
+        $scope.gpButtonText = "View All Rules";
+      }
+
+    };
 });

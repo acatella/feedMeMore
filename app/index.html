@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/animate.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="feedMeMoreApp" ng-controller="MainCtrl" ng-click"aboutMenuVis = false">
+  <body ng-app="feedMeMoreApp" ng-controller="MainCtrl" ng-click"toggleMenus('closeAll')">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -28,40 +28,40 @@
         <a class="logo" ng-href="#/index"><img src="../4_assets/visual/vrstc-logomark.png"></a>
         <nav class="top-nav">
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-click="toggleMenus(aboutMenu)" ng-click="toggleMenus($index)">About</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="aboutMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/club-history" ng-click="aboutMenu.visibility = false">Club History</a></li>
-              <li class="top-nav-item"><a ng-href="#/club-rules" ng-click="aboutMenu.visibility = false">Club Rules</a></li>
-              <li class="top-nav-item"><a ng-href="#/board" ng-click="aboutMenu.visibility = false">Board of Directors</a></li>
-              <li class="top-nav-item"><a ng-href="#/staff" ng-click="aboutMenu.visibility = false">Staff</a></li>
+            <a class="top-nav-dropdown-button" ng-click="toggleMenus(0)">About</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="menus[0]">
+              <li class="top-nav-item"><a ng-href="#/club-history" ng-click="menus[0] = false">Club History</a></li>
+              <li class="top-nav-item"><a ng-href="#/club-rules" ng-click="menus[0] = false">Club Rules</a></li>
+              <li class="top-nav-item"><a ng-href="#/board" ng-click="menus[0] = false">Board of Directors</a></li>
+              <li class="top-nav-item"><a ng-href="#/staff" ng-click="menus[0] = false">Staff</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(aquaticsMenu)">Aquatics</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="aquaticsMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/swim-team" ng-click="aquaticsMenu.visibility = false">Swim Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/adult-swim" ng-click="aquaticsMenu.visibility = false">Adult Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/waterpolo" ng-click="aquaticsMenu.visibility = false">Water Polo</a></li>
-              <li class="top-nav-item"><a ng-href="#swim-lessons" ng-click="aquaticsMenu.visibility = false">Lessons</a></li>
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(1)">Aquatics</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="menus[1]">
+              <li class="top-nav-item"><a ng-href="#/swim-team" ng-click="menus[1] = false">Swim Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/adult-swim" ng-click="menus[1] = false">Adult Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/waterpolo" ng-click="menus[1] = false">Water Polo</a></li>
+              <li class="top-nav-item"><a ng-href="#swim-lessons" ng-click="menus[1] = false">Lessons</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(tennisMenu)">Tennis</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="tennisMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/tennis-team" ng-click="tennisMenu.visibility = false">Tennis Team</a></li>
-              <li class="top-nav-item"><a ng-href="#/adult-tennis" ng-click="tennisMenu.visibility = false">Adult Tennis</a></li>
-              <li class="top-nav-item"><a ng-href="#/tennis-lessons" ng-click="tennisMenu.visibility = false">Lessons</a></li>
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(2)">Tennis</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="menus[2]">
+              <li class="top-nav-item"><a ng-href="#/tennis-team" ng-click="menus[2] = false">Tennis Team</a></li>
+              <li class="top-nav-item"><a ng-href="#/adult-tennis" ng-click="menus[2] = false">Adult Tennis</a></li>
+              <li class="top-nav-item"><a ng-href="#/tennis-lessons" ng-click="menus[2] = false">Lessons</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(eventsMenu)">Events</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="eventsMenu.visibility">
-              <li class="top-nav-item"><a ng-href="#/calendar" ng-click="eventsMenu.visibility = false">Calendar</a></li>
-              <li class="top-nav-item"><a ng-href="#events" ng-click="eventsMenu.visibility = false">Club Events</a></li>
+            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(3)">Events</a>
+            <ul class="top-nav-dropdown" ng-cloak ng-show="menus[3]">
+              <li class="top-nav-item"><a ng-href="#/calendar" ng-click="menus[3] = false">Calendar</a></li>
+              <li class="top-nav-item"><a ng-href="#events" ng-click="menus[3] = false">Club Events</a></li>
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button contact-nav" ng-href="#/contact" ng-click="toggleMenus(false)">Contact</a>
+            <a class="top-nav-dropdown-button contact-nav" ng-href="#/contact" ng-click="toggleMenus('closeAll')">Contact</a>
           </div>
         </nav>
         <a class="mobile-nav-button"></a>
@@ -109,7 +109,7 @@
         </nav>
       </header>
     </div> <!-- header container -->
-    <div ng-view=""></div>
+    <div ng-view="" ng-click="toggleMenus('closeAll')"></div>
 
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -147,5 +147,13 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/getposts.js"></script>
         <!-- endbuild -->
+
+    <script>
+    // Hides menu dropdown when document is clicked outside of open dropdown
+    $(document).on('click',function(e) {
+      $('.top-nav-dropdown').removeClass('top-nav-visible');
+      $('.top-nav-section').removeClass('rotate-caret');
+    });
+    </script>
 </body>
 </html>
