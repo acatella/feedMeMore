@@ -101,6 +101,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/pool-cues', {
+        templateUrl: 'views/pool-cues.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
