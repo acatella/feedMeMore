@@ -218,4 +218,60 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       }
 
     };
+
+    $scope.tcrButtonPosition = "absolute";
+    $scope.tcrButtonText = "View All Rules";
+    $scope.updateTcrButton = function() {
+      if ($scope.tcrButtonPosition == "absolute") {
+        $scope.tcrButtonPosition = "relative";
+        $scope.tcrButtonText = "Hide Rules"
+      }
+      else {
+        $scope.tcrButtonPosition = "absolute";
+        $scope.tcrButtonText = "View All Rules";
+      }
+
+    };
+
+    $scope.trButtonPosition = "absolute";
+    $scope.trButtonText = "View All Rules";
+    $scope.updateTrButton = function() {
+      if ($scope.trButtonPosition == "absolute") {
+        $scope.trButtonPosition = "relative";
+        $scope.trButtonText = "Hide Rules"
+      }
+      else {
+        $scope.trButtonPosition = "absolute";
+        $scope.trButtonText = "View All Rules";
+      }
+
+    };
+
+    $scope.prButtonPosition = "absolute";
+    $scope.prButtonText = "View All Rules";
+    $scope.updatePrButton = function() {
+      if ($scope.prButtonPosition == "absolute") {
+        $scope.prButtonPosition = "relative";
+        $scope.prButtonText = "Hide Rules"
+      }
+      else {
+        $scope.prButtonPosition = "absolute";
+        $scope.prButtonText = "View All Rules";
+      }
+
+    };
+
+    $scope.crButtonPosition = "absolute";
+    $scope.crButtonText = "View All Rules";
+    $scope.updateCrButton = function() {
+      if ($scope.crButtonPosition == "absolute") {
+        $scope.crButtonPosition = "relative";
+        $scope.crButtonText = "Hide Rules"
+      }
+      else {
+        $scope.crButtonPosition = "absolute";
+        $scope.crButtonText = "View All Rules";
+      }
+
+    };
 });

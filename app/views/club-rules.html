@@ -45,8 +45,8 @@
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">The staff has the right to restrict any activity they consider unsafe.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Only authorized staff may teach private lessons (swimming or tennis), which must go through the usual procedures for payment.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the Club rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a member for a period of time not exceeding three months, or may expel a member.)</span></li>
-          <div class="view-all">
-            <a class="button view-all-button" ng-click="crShown = !crShown">View All Rules</a>
+          <div class="view-all {{crButtonPosition}}">
+            <a class="button view-all-button" ng-click="crShown = !crShown; updateCrButton()">{{crButtonText}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -70,8 +70,8 @@
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">No "horse play" in or out of the water. This includes riding on shoulders, throwing children, or unsafe stunts from the side of the pool.</span></li>
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">No hanging on the basketball rims.</span></li>
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the pool rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a member for a period of time not exceeding three months, or may expel a member).</span></li>
-          <div class="view-all">
-            <a class="button view-all-button" ng-click="prShown = !prShown">View All Rules</a>
+          <div class="view-all {{prButtonPosition}}">
+            <a class="button view-all-button" ng-click="prShown = !prShown; updatePrButton()">{{prButtonText}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -101,8 +101,8 @@
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">You must be 16 to use the ball machine (unless accompanied by an adult).</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">No private lessons are allowed, except through Coach Ron, or his tennis staff. If you want to take a private lesson, please talk to Coach Ron.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts.</span></li>
-          <div class="view-all">
-            <a class="button view-all-button" ng-click="trShown = !trShown">View All Rules</a>
+          <div class="view-all {{trButtonPosition}}">
+            <a class="button view-all-button" ng-click="trShown = !trShown; updateTrButton()">{{trButtonText}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -124,8 +124,8 @@
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">You must be 16 to use the ball machine (unless accompanied by an adult).</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">No private lessons are allowed, except through Coach Ron, or his tennis staff. If you want to take a private lesson, please talk to Coach Ron.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts.</span></li>
-          <div class="view-all">
-            <a class="button view-all-button" ng-click="tcrShown = !tcrShown">View All Rules</a>
+          <div class="view-all {{tcrButtonPosition}}">
+            <a class="button view-all-button" ng-click="tcrShown = !tcrShown; updateTcrButton()">{{tcrButtonText}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
