@@ -210,7 +210,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.updateGpButton = function() {
       if ($scope.gpButtonPosition == "absolute") {
         $scope.gpButtonPosition = "relative";
-        $scope.gpButtonText = "Hide Rules"
+        $scope.gpButtonText = "Hide Rules";
       }
       else {
         $scope.gpButtonPosition = "absolute";
@@ -224,7 +224,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.updateTcrButton = function() {
       if ($scope.tcrButtonPosition == "absolute") {
         $scope.tcrButtonPosition = "relative";
-        $scope.tcrButtonText = "Hide Rules"
+        $scope.tcrButtonText = "Hide Rules";
       }
       else {
         $scope.tcrButtonPosition = "absolute";
@@ -238,7 +238,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.updateTrButton = function() {
       if ($scope.trButtonPosition == "absolute") {
         $scope.trButtonPosition = "relative";
-        $scope.trButtonText = "Hide Rules"
+        $scope.trButtonText = "Hide Rules";
       }
       else {
         $scope.trButtonPosition = "absolute";
@@ -252,7 +252,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.updatePrButton = function() {
       if ($scope.prButtonPosition == "absolute") {
         $scope.prButtonPosition = "relative";
-        $scope.prButtonText = "Hide Rules"
+        $scope.prButtonText = "Hide Rules";
       }
       else {
         $scope.prButtonPosition = "absolute";
@@ -266,7 +266,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.updateCrButton = function() {
       if ($scope.crButtonPosition == "absolute") {
         $scope.crButtonPosition = "relative";
-        $scope.crButtonText = "Hide Rules"
+        $scope.crButtonText = "Hide Rules";
       }
       else {
         $scope.crButtonPosition = "absolute";

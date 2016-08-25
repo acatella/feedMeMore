@@ -42,5 +42,8 @@
   },
   "scripts": {
     "test": "karma start test/karma.conf.js"
+  },
+  "dependencies": {
+    "moment": "^2.14.1"
   }
 }

@@ -505,17 +505,23 @@ tr:nth-child(odd) {
   color: #5e8cbd;
   margin-bottom: 25px;
   display: inline-block;
+  font-size: 14px;
 }
 
 .clock-icon {
   background-image: url('../../4_assets/visual/clock-icon.png');
   background-size: 100%;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   position: relative;
   top: 4px;
-  margin-right: 10px;
+  margin-right: 5px;
   display: inline-block;
+}
+
+.ch-post h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 /* CLUB ACTIVITIES
 --------------------------- */
