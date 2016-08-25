@@ -6,28 +6,28 @@ $(document).ready(function() {
     $('.top-nav-section').removeClass('rotate-caret');
   });
 
-  // Top Nav Click Events for Mobile and Desktop
-  $('.top-nav-dropdown-button').on('click',function(e) {
-    e.stopPropagation(); //Stops default closing of menu
-
-    var topNavSection = $(e.target).parent();
-
-    var dropdown = $(e.target).parent().find('.top-nav-dropdown');
-
-    if (dropdown.hasClass('top-nav-visible')) {
-      dropdown.removeClass('top-nav-visible')
-      topNavSection.removeClass('rotate-caret');
-      console.log('hi jquery');
-    }
-
-    else {
-      $('.top-nav-dropdown').removeClass('top-nav-visible');
-      dropdown.addClass('top-nav-visible');
-      $('.top-nav-section').removeClass('rotate-caret');
-      topNavSection.addClass('rotate-caret');
-    }
-
-  });
+  // // Top Nav Click Events for Mobile and Desktop
+  // $('.top-nav-dropdown-button').on('click',function(e) {
+  //   e.stopPropagation(); //Stops default closing of menu
+  //
+  //   var topNavSection = $(e.target).parent();
+  //
+  //   var dropdown = $(e.target).parent().find('.top-nav-dropdown');
+  //
+  //   if (dropdown.hasClass('top-nav-visible')) {
+  //     dropdown.removeClass('top-nav-visible');
+  //     topNavSection.removeClass('rotate-caret');
+  //     console.log('hi jquery');
+  //   }
+  //
+  //   else {
+  //     $('.top-nav-dropdown').removeClass('top-nav-visible');
+  //     dropdown.addClass('top-nav-visible');
+  //     $('.top-nav-section').removeClass('rotate-caret');
+  //     topNavSection.addClass('rotate-caret');
+  //   }
+  //
+  // });
 
   // Mobile Nav Click Events
   $('.mobile-nav-dropdown-button').on('click', function(e) {
@@ -72,7 +72,7 @@ $(document).ready(function() {
     var clicked = $(e.target);
     var parent = clicked.parent().parent();
 
-    if (clicked.text() == 'View All Rules') {
+    if (clicked.text() === 'View All Rules') {
       parent.find('.ol-item').removeClass('hidden');
       clicked.parent().css('position','relative');
       clicked.text('Hide Rules');
