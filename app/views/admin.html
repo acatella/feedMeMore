@@ -13,23 +13,24 @@
       <input class="submit-button animated" id="submit_button" type="submit" ng-click="createPost()">
     </form>
   </div>
-  <div class="scroll-alert">
+  <!-- <div class="scroll-alert">
     Scroll for Post History
-  </div>
+  </div> -->
 </section>
 <section class="post-history-section">
   <div class="post-history-container">
+    <h3 class="post-history-title">Post History</h3>
     <div class="old-post-container"  ng-repeat="post in posts">
       <div class="old-post" ng-click="shown = !shown">
         <h3 class="old-post-title">{{post.node.title}}</h3>
-        <h4 class="old-post-date">{{post.node.createdAt | date:shortDate}}</h4>
+        <h4 class="old-post-date">Posted: {{post.node.createdAt | date:shortDate}}</h4>
       </div>
       <div class="old-post-content-container" ng-show="shown">
         <p class="old-post-content {{post.contentVis}}">
           {{post.node.content}}
         </p>
         <a class="multi-button">
-          <span class="edit-button">Edit</span>
+          <!-- <span class="edit-button">Edit</span> -->
           <span class="delete-button" ng-click="deletePost(post.node.id)">Delete</span>
         </a>
       </div>
