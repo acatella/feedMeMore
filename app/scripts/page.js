@@ -52,6 +52,11 @@ $(document).ready(function() {
     $('.mobile-nav-section').removeClass('mobile-nav-visible');
   });
 
+  $('.mobile-nav-item').on('click',function() {
+    $('.mobile-nav').css('display','none');
+    $('.mobile-nav-section').removeClass('mobile-nav-visible');
+  });
+
   //function that hides all list items after the 5th one
   function hideItems() {
     $('.ol-item:nth-child(n+6)').addClass('hidden');
