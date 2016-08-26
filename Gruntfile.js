@@ -41,7 +41,7 @@ module.exports = function (grunt) {
      },
      pages: {
        options: {
-         remote: 'git@github.com:acatella/feedMeMore.git',
+         remote: 'git@github.com:acatella/vrstc.git',
          branch: 'gh-pages'
        }
      }
