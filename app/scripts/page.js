@@ -30,32 +30,32 @@ $(document).ready(function() {
   // });
 
   // Mobile Nav Click Events
-  $('.mobile-nav-dropdown-button').on('click', function(e) {
-    var section = $(e.target).parent();
-
-    if (section.hasClass('mobile-nav-visible')) {
-      section.removeClass('mobile-nav-visible');
-    }
-
-    else {
-      $('.mobile-nav-section').removeClass('mobile-nav-visible');
-      section.addClass('mobile-nav-visible');
-    }
-  });
-
-  $('.mobile-nav-button').on('click',function() {
-    $('.mobile-nav').css('display','block');
-  });
-
-  $('.mobile-nav-close').on('click',function() {
-    $('.mobile-nav').css('display','none');
-    $('.mobile-nav-section').removeClass('mobile-nav-visible');
-  });
-
-  $('.mobile-nav-item').on('click',function() {
-    $('.mobile-nav').css('display','none');
-    $('.mobile-nav-section').removeClass('mobile-nav-visible');
-  });
+  // $('.mobile-nav-dropdown-button').on('click', function(e) {
+  //   var section = $(e.target).parent();
+  //
+  //   if (section.hasClass('mobile-nav-visible')) {
+  //     section.removeClass('mobile-nav-visible');
+  //   }
+  //
+  //   else {
+  //     $('.mobile-nav-section').removeClass('mobile-nav-visible');
+  //     section.addClass('mobile-nav-visible');
+  //   }
+  // });
+  //
+  // $('.mobile-nav-button').on('click',function() {
+  //   $('.mobile-nav').css('display','block');
+  // });
+  //
+  // $('.mobile-nav-close').on('click',function() {
+  //   $('.mobile-nav').css('display','none');
+  //   $('.mobile-nav-section').removeClass('mobile-nav-visible');
+  // });
+  //
+  // $('.mobile-nav-item').on('click',function() {
+  //   $('.mobile-nav').css('display','none');
+  //   $('.mobile-nav-section').removeClass('mobile-nav-visible');
+  // });
 
   //function that hides all list items after the 5th one
   function hideItems() {

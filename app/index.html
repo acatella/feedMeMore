@@ -64,10 +64,10 @@
             <a class="top-nav-dropdown-button contact-nav" ng-href="#/contact" ng-click="toggleMenus('closeAll')">Contact</a>
           </div>
         </nav>
-        <a class="mobile-nav-button"></a>
-        <nav class="mobile-nav">
+        <a class="mobile-nav-button" ng-click="mobileNav = true"></a>
+        <nav class="mobile-nav" ng-show="mobileNav">
           <div class="mobile-nav-container">
-            <a class="mobile-nav-close">x</a>
+            <a class="mobile-nav-close" ng-click="mobileNav = !mobileNav">x</a>
             <div class="mobile-nav-section">
               <a class="mobile-nav-dropdown-button">About</a>
               <ul class="mobile-nav-dropdown">
