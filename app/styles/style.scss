@@ -1518,8 +1518,7 @@ header .logo img {
 
 .mobile-nav-dropdown {
   width: 70%;
-  display: none;
-
+  display:inline-block;
 }
 
 .mobile-nav-item {
@@ -1530,10 +1529,6 @@ header .logo img {
   display: inline-block;
   width: 100%;
   padding: 15px 10px 15px 0;
-}
-
-.mobile-nav-visible .mobile-nav-dropdown {
-  display: inline-block
 }
 
 .mobile-nav-section:hover .mobile-nav-dropdown-button {

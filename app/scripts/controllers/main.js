@@ -30,6 +30,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     // $scope.tennisMenu = {visibility: false}; 2
     // $scope.eventsMenu = {visibility: false}; 3
     $scope.menus = [ false, false, false, false ];
+    $scope.mobileMenus = [ false, false, false, false ];
 
     // Methods to determine if previous and next buttons display
     // function checkNextPage(pageInfo) {
@@ -201,6 +202,23 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         }
 
         $scope.menus[menuItem] = true;
+      }
+    };
+
+    // Hides all mobile menus when clicked
+    $scope.toggleMobileMenus = function(menuItem)  {
+      console.log($scope.mobileMenus[menuItem]);
+      if ($scope.mobileMenus[menuItem] === true && menuItem !== 'closeAll') {
+        $scope.mobileMenus[menuItem] = false;
+        return;
+      }
+
+      else {
+        for (var i=0; i<$scope.mobileMenus.length;i++) {
+          $scope.mobileMenus[i] = false;
+        }
+
+        $scope.mobileMenus[menuItem] = true;
       }
     };
 

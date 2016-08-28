@@ -54,8 +54,8 @@
             </ul>
           </div>
           <div class="top-nav-section">
-            <a class="top-nav-dropdown-button" ng-cloak ng-click="toggleMenus(3)">Events</a>
-            <ul class="top-nav-dropdown" ng-cloak ng-show="menus[3]">
+            <a class="top-nav-dropdown-button" ng-click="toggleMenus(3)">Events</a>
+            <ul class="top-nav-dropdown" ng-show="menus[3]">
               <li class="top-nav-item"><a ng-href="#/calendar" ng-click="menus[3] = false">Calendar</a></li>
               <li class="top-nav-item"><a ng-href="#events" ng-click="menus[3] = false">Club Events</a></li>
             </ul>
@@ -69,41 +69,41 @@
           <div class="mobile-nav-container">
             <a class="mobile-nav-close" ng-click="mobileNav = !mobileNav">x</a>
             <div class="mobile-nav-section">
-              <a class="mobile-nav-dropdown-button">About</a>
-              <ul class="mobile-nav-dropdown">
-                <li class="mobile-nav-item"><a href="#/club-history">Club History</a></li>
-                <li class="mobile-nav-item"><a href="#/membership">Membership</a></li>
-                <li class="mobile-nav-item"><a href="#/club-rules">Club Rules</a></li>
-                <li class="mobile-nav-item"><a href="#/board">Board of Directors</a></li>
-                <li class="mobile-nav-item"><a href="#/staff">Staff</a></li>
+              <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus(0)">About</a>
+              <ul class="mobile-nav-dropdown" ng-show="mobileMenus[0]">
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[0] = false; mobileNav = false" href="#/club-history">Club History</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[0] = false; mobileNav = false" href="#/membership">Membership</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[0] = false; mobileNav = false" href="#/club-rules">Club Rules</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[0] = false; mobileNav = false" href="#/board">Board of Directors</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[0] = false; mobileNav = false" href="#/staff">Staff</a></li>
               </ul>
             </div>
             <div class="mobile-nav-section">
-              <a class="mobile-nav-dropdown-button">Aquatics</a>
-              <ul class="mobile-nav-dropdown">
-                <li class="mobile-nav-item"><a href="#/swim-team">Swim Team</a></li>
-                <li class="mobile-nav-item"><a href="#/adult-swim">Adult Team</a></li>
-                <li class="mobile-nav-item"><a href="#/waterpolo">Water Polo</a></li>
-                <li class="mobile-nav-item"><a href="#/swim-lessons">Lessons</a></li>
+              <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus(1)">Aquatics</a>
+              <ul class="mobile-nav-dropdown" ng-show="mobileMenus[1]">
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[1] = false; mobileNav = false" href="#/swim-team">Swim Team</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[1] = false; mobileNav = false" href="#/adult-swim">Adult Team</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[1] = false; mobileNav = false" href="#/waterpolo">Water Polo</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[1] = false; mobileNav = false" href="#/swim-lessons">Lessons</a></li>
               </ul>
             </div>
             <div class="mobile-nav-section">
-              <a class="mobile-nav-dropdown-button">Tennis</a>
-              <ul class="mobile-nav-dropdown">
-                <li class="mobile-nav-item"><a href="#/tennis-team">Tennis Team</a></li>
-                <li class="mobile-nav-item"><a href="#/adult-tennis">Adult Tennis</a></li>
-                <li class="mobile-nav-item"><a href="#/tennis-lessons">Lessons</a></li>
+              <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus(2)">Tennis</a>
+              <ul class="mobile-nav-dropdown" ng-show="mobileMenus[2]">
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[2] = false; mobileNav = false" href="#/tennis-team">Tennis Team</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[2] = false; mobileNav = false" href="#/adult-tennis">Adult Tennis</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[2] = false; mobileNav = false" href="#/tennis-lessons">Lessons</a></li>
               </ul>
             </div>
             <div class="mobile-nav-section">
-              <a class="mobile-nav-dropdown-button">Events</a>
-              <ul class="mobile-nav-dropdown">
-                <li class="mobile-nav-item"><a href="#/calendar">Calendar</a></li>
-                <li class="mobile-nav-item"><a href="#/events">Club Events</a></li>
+              <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus(3)">Events</a>
+              <ul class="mobile-nav-dropdown" ng-show="mobileMenus[3]">
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[3] = false; mobileNav = false" href="#/calendar">Calendar</a></li>
+                <li class="mobile-nav-item"><a ng-click="mobileMenus[3] = false; mobileNav = false" href="#/events">Club Events</a></li>
               </ul>
             </div>
             <div class="mobile-nav-section">
-              <a class="mobile-nav-dropdown-button" href="#/contact">Contact</a>
+              <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus('closeAll')" href="#/contact">Contact</a>
             </div>
           </div>
         </nav>
