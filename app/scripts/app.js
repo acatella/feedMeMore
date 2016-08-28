@@ -106,6 +106,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/membership', {
+        templateUrl: 'views/membership.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
