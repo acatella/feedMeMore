@@ -21,36 +21,88 @@
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
 
     // Global variables
-    // var threePosts = [];
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
     var pageNumber = 0;
-    // $scope.aboutMenu = {visibility: true}; 0
-    // $scope.aquaticsMenu = {visibility: false}; 1
-    // $scope.tennisMenu = {visibility: false}; 2
-    // $scope.eventsMenu = {visibility: false}; 3
     $scope.menus = [ false, false, false, false ];
     $scope.mobileMenus = [ false, false, false, false ];
 
-    // Methods to determine if previous and next buttons display
-    // function checkNextPage(pageInfo) {
-    //     if (pageInfo.hasNextPage) {
-    //       $scope.hasNextPage = true;
-    //     }
-    //     else {
-    //       $scope.hasNextPage = false;
-    //     }
-    // }
-    //
-    // function checkPreviousPage() {
-    //   if (pageNumber > 0) {
-    //     $scope.hasPreviousPage = true;
-    //   }
-    //   else {
-    //     $scope.hasPreviousPage = false;
-    //   }
-    // }
-
+    // Array and objects to define nav menus
+    $scope.menuItems = [
+        {
+          "title": "About",
+          "listItems": [
+            {
+              "header": "Club History",
+              "linkAddress": "club-history.html"
+            },
+            {
+              "header": "Membership",
+              "linkAddress": "membership.html"
+            },
+            {
+              "header": "club-rules",
+              "linkAddress": "club-rules.html"
+            },
+            {
+              "header": "Board of Directors",
+              "linkAddress": "board.html"
+            },
+            {
+              "header": "Staff",
+              "linkAddress": "staff.html"
+            }
+          ]
+        },
+          {
+            "title": "Aquatics",
+            "listItems": [
+              {
+                "header": "Swim Team",
+                "linkAddress": "swim-team.html"
+              },
+              {
+                "header": "Adult Team",
+                "linkAddress": "adult-swim.html"
+              },
+              {
+                "header": "Water Polo",
+                "linkAddress": "waterpolo.html"
+              },
+              {
+                "header": "Lessons",
+                "linkAddress": "swim-lessons.html"
+              }
+            ]
+          },
+          {
+            "title": "Tennis",
+            "listItems": [
+              {
+                "header": "Tennis Team",
+                "linkAddress":"tennis-team.html"
+              },
+              {
+                "header": "Adult Tennis",
+                "linkAddress": "adult-tennis.html"
+              },
+              {
+                "header": "Lessons",
+                "linkAddress": "tennis-lessons.html"
+              }
+            ]
+          },
+          {
+            "title": "Events",
+            "listItems": [
+              {
+                "header": "Calendar",
+                "linkAddress": "calendar.html"
+              }
+            ]
+          }
+    ];
+    
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
       if (pageNumber+2 >= posts.length) {
@@ -102,38 +154,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       showPreviousButton($scope.posts);
       showNextButton($scope.posts);
     };
-
-    // Queries db and return array of three posts to show on home page
-    // allPosts.getThreePosts().success(function(data) {
-    //   threePosts = data.data.viewer.allPosts.edges;
-    //   $scope.threePosts = threePosts;
-    //   checkNextPage(data.data.viewer.allPosts.pageInfo);
-    //   checkPreviousPage(data.data.viewer.allPosts.pageInfo);
-    // });
-
-    // Returns next three posts on button click
-    // $scope.getNextPosts = function() {
-    //
-    //   allPosts.getNextPosts($scope.threePosts[$scope.threePosts.length-1].cursor).success(function(data) {
-    //     pageNumber += 1;
-    //     $scope.threePosts = data.data.viewer.allPosts.edges;
-    //     console.log($scope.threePosts);
-    //     checkNextPage(data.data.viewer.allPosts.pageInfo);
-    //     checkPreviousPage(data.data.viewer.allPosts.pageInfo);
-    //   });
-    // };
-
-    // Returns previous three posts on button click
-    // $scope.getPreviousPosts = function () {
-    //   pageNumber -= 1;
-    //   allPosts.getPreviousPosts($scope.threePosts[0].cursor).success(function(data) {
-    //       $scope.threePosts = data.data.viewer.allPosts.edges;
-    //       console.log($scope.threePosts);
-    //       data.data.viewer.allPosts.pageInfo.hasNextPage = true;
-    //       checkNextPage(data.data.viewer.allPosts.pageInfo);
-    //       checkPreviousPage(data.data.viewer.allPosts.pageInfo);
-    //   });
-    // };
 
     // Add a new post to the db, takes title and content as paramaters
     $scope.createPost = function() {
