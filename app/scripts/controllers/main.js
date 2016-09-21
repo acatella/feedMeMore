@@ -98,11 +98,15 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
               {
                 "header": "Calendar",
                 "linkAddress": "calendar.html"
+              },
+              {
+                "header": "Club Events",
+                "linkAddress": "club-events.html"
               }
             ]
           }
     ];
-    
+
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
       if (pageNumber+2 >= posts.length) {

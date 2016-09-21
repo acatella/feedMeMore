@@ -111,6 +111,11 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
+      .when('/nav-test', {
+        templateUrl: 'views/nav-test.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
       .otherwise({
         redirectTo: '/'
       });
