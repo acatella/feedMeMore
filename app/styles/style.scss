@@ -642,8 +642,7 @@ tr:nth-child(odd) {
   border-bottom: 1px solid #cfd6dc;
 }
 
-.coach-photo-section {
-  /*padding: 60px 22px 47px;*/
+.coach-photo-section {  
   padding-top: 60px;
   padding-bottom: 47px;
   padding-left: 4%;
@@ -657,6 +656,7 @@ tr:nth-child(odd) {
   vertical-align: top;
   padding: 0 4%;
   width: 45%;
+  overflow:hidden;
 }
 
 .coach-photo:last-child {
@@ -1021,7 +1021,7 @@ ol.order-list .hidden { /* hides all but set number of rules per section */
 --------------------------- */
 
 .view-all {
-  text-align: center;  
+  text-align: center;
   bottom: 0;
   display: block;
   width: 100%;
