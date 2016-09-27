@@ -1,7 +1,7 @@
 
   <div class="top-nav-section" ng-repeat="menu in menuItems">
-    <a class="top-nav-dropdown-button">{{menu.title}}</a>
-    <ul class="top-nav-dropdown" ng-repeat="item in menu.listItems">
-      <li class="top-nav-item"><a href="/#/{{item.linkAddress}}">{{item.header}}</a></li>
+    <a class="top-nav-dropdown-button" ng-click="toggleNav($index)">{{menu.title}}</a>
+    <ul class="top-nav-dropdown" ng-show="menus[$index]">
+      <li class="top-nav-item" ng-click="toggleNav('Close')" ng-repeat="item in menu.listItems"><a ng-href="/#/{{item.linkAddress}}">{{item.header}}</a></li>
     </ul>
   </div>

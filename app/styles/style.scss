@@ -642,7 +642,7 @@ tr:nth-child(odd) {
   border-bottom: 1px solid #cfd6dc;
 }
 
-.coach-photo-section {  
+.coach-photo-section {
   padding-top: 60px;
   padding-bottom: 47px;
   padding-left: 4%;
@@ -1436,9 +1436,10 @@ header .logo img {
   text-decoration: none;
 }
 
-.top-nav-section:last-child .top-nav-dropdown-button:before {
+.contact-nav:before {
   background: transparent;
 }
+
 /* MOBILE NAV
 -------------------------------------------------------------------------------- */
 

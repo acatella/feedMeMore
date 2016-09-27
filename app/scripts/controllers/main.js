@@ -27,6 +27,20 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.menus = [ false, false, false, false ];
     $scope.mobileMenus = [ false, false, false, false ];
 
+    // Function to open and close a nav menu when clicked
+    $scope.toggleNav = function(index) {
+      console.log('hi there');
+      if (index == 'Close') {
+        for (var i=0; i<=$scope.menus.length; i++) {
+          $scope.menus[i] = false;
+        }
+      }
+
+      else {
+        $scope.menus[index] = !$scope.menus[index];
+      }
+    };
+
     // Array and objects to define nav menus
     $scope.menuItems = [
         {
@@ -41,7 +55,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
               "linkAddress": "membership.html"
             },
             {
-              "header": "club-rules",
+              "header": "Club Rules",
               "linkAddress": "club-rules.html"
             },
             {
@@ -109,6 +123,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
+      console.log('yo');
       if (pageNumber+2 >= posts.length) {
         $scope.hasNextPage = false;
       } else {

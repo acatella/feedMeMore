@@ -109,7 +109,10 @@ angular.module('feedMeMoreApp')
 angular.module('feedMeMoreApp').directive('navMenu',function() {
     return {
       restrict: 'AE',
-      replace: 'true',
-      templateUrl: '/scripts/directives/navMenuTemplate.html'
+      replace: 'false',
+      templateUrl: '/scripts/directives/navMenuTemplate.html',
+      link: function(scope,elem,attrs) {
+
+      }
     };
   });
