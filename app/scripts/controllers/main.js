@@ -29,15 +29,21 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Function to open and close a nav menu when clicked
     $scope.toggleNav = function(index) {
-      console.log('hi there');
-      if (index == 'Close') {
-        for (var i=0; i<=$scope.menus.length; i++) {
-          $scope.menus[i] = false;
+      for (var i=0; i<=$scope.menus.length-1; i++) {
+        if (i === index) {
+          $scope.menus[i] = !$scope.menus[i];
         }
+
+        else {$scope.menus[i] = false;}
+
       }
 
-      else {
-        $scope.menus[index] = !$scope.menus[index];
+    };
+
+    $scope.closeNav = function() {
+      for (var i=0; i<=$scope.menus.length-1; i++) {
+        $scope.menus[i] = false;
+        console.log('menu item');
       }
     };
 
@@ -48,23 +54,23 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
           "listItems": [
             {
               "header": "Club History",
-              "linkAddress": "club-history.html"
+              "linkAddress": "club-history"
             },
             {
               "header": "Membership",
-              "linkAddress": "membership.html"
+              "linkAddress": "membership"
             },
             {
               "header": "Club Rules",
-              "linkAddress": "club-rules.html"
+              "linkAddress": "club-rules"
             },
             {
               "header": "Board of Directors",
-              "linkAddress": "board.html"
+              "linkAddress": "board"
             },
             {
               "header": "Staff",
-              "linkAddress": "staff.html"
+              "linkAddress": "staff"
             }
           ]
         },
@@ -73,19 +79,19 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
             "listItems": [
               {
                 "header": "Swim Team",
-                "linkAddress": "swim-team.html"
+                "linkAddress": "swim-team"
               },
               {
                 "header": "Adult Team",
-                "linkAddress": "adult-swim.html"
+                "linkAddress": "adult-swim"
               },
               {
                 "header": "Water Polo",
-                "linkAddress": "waterpolo.html"
+                "linkAddress": "waterpolo"
               },
               {
                 "header": "Lessons",
-                "linkAddress": "swim-lessons.html"
+                "linkAddress": "swim-lessons"
               }
             ]
           },
@@ -94,15 +100,15 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
             "listItems": [
               {
                 "header": "Tennis Team",
-                "linkAddress":"tennis-team.html"
+                "linkAddress":"tennis-team"
               },
               {
                 "header": "Adult Tennis",
-                "linkAddress": "adult-tennis.html"
+                "linkAddress": "adult-tennis"
               },
               {
                 "header": "Lessons",
-                "linkAddress": "tennis-lessons.html"
+                "linkAddress": "tennis-lessons"
               }
             ]
           },
@@ -111,11 +117,11 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
             "listItems": [
               {
                 "header": "Calendar",
-                "linkAddress": "calendar.html"
+                "linkAddress": "calendar"
               },
               {
                 "header": "Club Events",
-                "linkAddress": "club-events.html"
+                "linkAddress": "club-events"
               }
             ]
           }
