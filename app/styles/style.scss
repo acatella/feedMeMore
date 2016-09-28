@@ -365,6 +365,17 @@ tr:nth-child(odd) {
 /* CALENDAR
 --------------------------- */
 
+.full-page-calendar {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.calendar-body {
+  padding: 125px 0;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .calendar-container {
   width: 90%;
   max-width: 1260px;
