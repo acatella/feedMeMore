@@ -32,18 +32,19 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       for (var i=0; i<=$scope.menus.length-1; i++) {
         if (i === index) {
           $scope.menus[i] = !$scope.menus[i];
-        }
 
-        else {$scope.menus[i] = false;}
+
+        } else {$scope.menus[i] = false;}
+
+
 
       }
-
+      
     };
 
     $scope.closeNav = function() {
       for (var i=0; i<=$scope.menus.length-1; i++) {
         $scope.menus[i] = false;
-        console.log('menu item');
       }
     };
 

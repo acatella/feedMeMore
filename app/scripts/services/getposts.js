@@ -113,6 +113,25 @@ angular.module('feedMeMoreApp').directive('navMenu',function() {
       templateUrl: '/scripts/directives/navMenuTemplate.html',
       link: function(scope,elem,attrs) {
 
+          // Closes nav when a user clicks outside of a menu
+          $(document).on('click', function(e){
+            if (elem !== e.target && !elem[0].contains(e.target)) {
+              scope.closeNav();
+            }
+          });
       }
     };
   });
+
+ // angular.module('feedMeMoreApp').directive('stopEvent', function () {
+ //   return {
+ //     restrict: 'A',
+ //     link: function(scope, elem, attr) {
+ //       if(attr && attr.stopEvent) {
+ //         elem.bind(attr.stopEvent, function (e) {
+ //             e.stopPropagation();
+ //         });
+ //       }
+ //     }
+ //   };
+ // });
