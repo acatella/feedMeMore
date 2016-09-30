@@ -39,7 +39,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
 
       }
-      
+
     };
 
     $scope.closeNav = function() {
@@ -122,7 +122,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
               },
               {
                 "header": "Club Events",
-                "linkAddress": "club-events"
+                "linkAddress": "events"
               }
             ]
           }
