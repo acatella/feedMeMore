@@ -27,7 +27,7 @@
       <header id="header">
         <a class="logo" ng-href="#/index" ng-click="toggleMenus('closeAll')"><img src="images/vrstc-logomark.png"></a>
         <nav class="top-nav">
-          <!-- <div class="top-nav-section">
+          <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-click="toggleMenus(0)">About</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="menus[0]">
               <li class="top-nav-item"><a ng-href="#/club-history" ng-click="menus[0] = false">Club History</a></li>
@@ -60,14 +60,14 @@
               <li class="top-nav-item"><a ng-href="#/calendar" ng-click="menus[3] = false">Calendar</a></li>
               <li class="top-nav-item"><a ng-href="#events" ng-click="menus[3] = false">Club Events</a></li>
             </ul>
-          </div> -->
+          </div>
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button contact-nav" ng-href="#/contact" ng-click="toggleMenus('closeAll')">Contact</a>
           </div>
         </nav>
-        <nav class="top-nav">
+        <!-- <nav class="top-nav">
           <nav-menu/>
-        </nav>
+        </nav> -->
         <a class="mobile-nav-button" ng-click="mobileNav = true"></a>
         <nav class="mobile-nav" ng-show="mobileNav">
           <div class="mobile-nav-container">
