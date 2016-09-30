@@ -278,7 +278,7 @@ a:hover {
 .email {
   display: inline-block;
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* TABLE STYLE
@@ -358,7 +358,7 @@ tr:nth-child(odd) {
 }
 
 .spacer {
-  height: 390px;
+  height: 740px;
   background: #dce5eb;
 }
 
@@ -389,18 +389,15 @@ tr:nth-child(odd) {
 }
 
 .calendar-plugin {
-  width: 60%;
-  height: 600px;
-  float: right;
-  border-left: 2px solid #cfd6dc;
+  height: 450px;
+  border-top: 2px solid #cfd6dc;
 }
 
 /* ABOUT
 --------------------------- */
 
 .about {
-  width: 40%;
-  display: inline-block;
+  display: block;
   background: #fff;
   padding: 80px 70px;
   height: 100%;
