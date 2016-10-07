@@ -110,7 +110,7 @@ angular.module('feedMeMoreApp').directive('navMenu',function() {
     return {
       restrict: 'AE',
       replace: 'false',
-      templateUrl: '/scripts/directives/navMenuTemplate.html',
+      templateUrl: 'scripts/directives/navMenuTemplate.html',
       link: function(scope,elem,attrs) {
 
           // Closes nav when a user clicks outside of a menu
