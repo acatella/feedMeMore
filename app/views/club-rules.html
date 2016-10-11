@@ -21,8 +21,8 @@
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">No glass anywhere at the facility.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Walk on the deck. Please no running or playing on the concrete walkways within the club premise.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">No pets are permitted on the club premises (including the tennis area).</span></li>
-          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Bicycles shall be placed in the bicycle rack outside the pool enclosure by the tennis courts.</span></li>
-          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">No "roller blading" in the pool area</span></li>
+          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Bicycles shall be placed in the bicycle rack outside the pool enclosure by the tennis courts. Bicycles are not allowed in the pool area.</span></li>
+          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">No roller blading, skateboarding, or scootering, or bicycling in the pool area.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">When lounge-chairs are in heavy demand, adults shall have priority in their use.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Proper and safe behavior is expected in the dressing rooms.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Members will be responsible for any damage, loss, or infraction on the rules by themselves, their children, or their guests.</span></li>
@@ -30,7 +30,7 @@
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">No hanging on the basketball rims.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">The staff has the right to restrict any activity they consider unsafe.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Only authorized staff may teach private lessons (swimming or tennis), which must go through the usual procedures for payment.</span></li>
-          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the Club rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a member for a period of time not exceeding three months, or may expel a member.)</span></li>
+          <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the Club rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a member for a period of time not exceeding three months, or may expel a member).</span></li>
           <div class="view-all {{crButtonPosition}}">
             <a class="button view-all-button" ng-click="crShown = !crShown; updateCrButton()">{{crButtonText}}</a>
           </div>
@@ -67,11 +67,12 @@
         <h2>Tennis Court Rules - Summer</h2>
         <span class="wave-icon"></span>
         <ol class="order-list">
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Courts are for use by Members only. Members may invite a guest, but no guests may use the court without a member present.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Reservation and play will be in one hour periods starting on the hour except as noted in 2. Reservations must be made by telephone or in person at the pool office during operating hours.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A tennis doubles foursome may sign up for two consecutive hours of court time when a court is available.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A member who is unable to keep a reservation shall notify the pool office as soon as possible so that another person may reserve the court.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Failure to be present within 10 minutes after the start of the reserved period forfeits the reservation.</span></li>
+          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Failure to be present within 10 minutes after the start of the reserved period forfeits the reservation.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">The courts are held for adults-only reservations from 7:00 am - 8:00 am Monday through Saturday, from 5:00 pm to closing on Monday through Friday and from 12:00 noon Saturday until closing on Sunday.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">During adults-only periods, the courts may be reserved only for adults or adults with their children. During these periods, children may play if courts are unoccupied but must yield to adults who appear and wish to play.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">During times when courts are not reserved for group tennis lessons or tennis teams, one court only will be reserved for tennis lessons as demand dictates. When not in use for lessons, this court will be available for play.</span></li>
@@ -102,14 +103,12 @@
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Failure to be present within 10 minutes after the start of the reserved period forfeits the reservation.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played. Except as provided in 2, members may not reserve two consecutive hours for doubles, but if the court is vacant after one hour of play, the players may sign up for a second hour.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Players must wear tennis shoes. hard-soled shoes, shoes with any kind of heel, or shoes with soles which mark up the court are not permitted.</span></li>
-          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">No food, beverages, or smoking shall be allowed on the courts.</span></li>
+          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Skateboards, roller skates, and bicycles are not allowed on the tennis courts.</span></li>
+          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Smoking is not permitted on the premises.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Proper tennis attire is recommended.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The use of radios in and around the tennis courts is not permitted.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">After completing play, players must make sure that all gates to the tennis courts are closed when no one is waiting to play. After completing night play, players should turn off the lights on the court only when other play is not scheduled immediately following.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The tennis backboard is available without reservation on a first-come, first-serve basis.</span></li>
-          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">You must be 16 to use the ball machine (unless accompanied by an adult).</span></li>
-          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">No private lessons are allowed, except through Coach Ron, or his tennis staff. If you want to take a private lesson, please talk to Coach Ron.</span></li>
-          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts.</span></li>
           <div class="view-all {{tcrButtonPosition}}">
             <a class="button view-all-button" ng-click="tcrShown = !tcrShown; updateTcrButton()">{{tcrButtonText}}</a>
           </div>
