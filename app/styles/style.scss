@@ -193,7 +193,15 @@ a:hover {
 }
 
 .generic-splash {
-  background: url("../images/vrstc-background.jpg");
+  background: url("../images/pool-wide.jpg");
+  background-size:cover;
+  background-position: center;
+}
+
+.generic-splash-alt {
+  background: url("../images/panorama.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
 .hero-text {
@@ -313,7 +321,9 @@ tr:nth-child(odd) {
 
 .splash-img {
   height: 800px;
-  background: url("../images/vrstc-background.jpg");
+  background: url("../images/pool-in-sun.jpg");
+  background-size: cover;
+  background-position:center;
   color: #fff;
   position: relative; /* provides anchor for calendar-container */
 }
