@@ -21,7 +21,7 @@
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
 
     $scope.eventSources = [];
-    
+
     // Global variables
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
@@ -134,7 +134,8 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
-      if (pageNumber+2 >= posts.length) {
+      if (pageNumber+3 >= posts.length) {
+        console.log(posts.length);
         $scope.hasNextPage = false;
       } else {
         $scope.hasNextPage = true;
@@ -152,7 +153,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     // Queries db and returns array of all posts in descending chronological order
     allPosts.getPosts().success(function(data) {
       var posts = data.data.viewer.allPosts.edges;
-      console.log(posts);
 
       $scope.posts = posts;
       $scope.threePosts = $scope.posts.slice(pageNumber,pageNumber+3);
@@ -243,7 +243,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
       else {
         for (var i=0; i<$scope.menus.length;i++) {
-          console.log($scope.menus[i]);
           $scope.menus[i] = false;
         }
 
@@ -253,7 +252,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Hides all mobile menus when clicked
     $scope.toggleMobileMenus = function(menuItem)  {
-      console.log($scope.mobileMenus[menuItem]);
       if ($scope.mobileMenus[menuItem] === true && menuItem !== 'closeAll') {
         $scope.mobileMenus[menuItem] = false;
         return;
