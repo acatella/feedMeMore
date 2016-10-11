@@ -10,7 +10,10 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
+
+
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css"/>
     <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/admin-main.css">
@@ -27,7 +30,7 @@
       <header id="header">
         <a class="logo" ng-href="#/index" ng-click="toggleMenus('closeAll')"><img src="images/vrstc-logomark.png"></a>
         <nav class="top-nav">
-          <div class="top-nav-section">
+          <!-- <div class="top-nav-section">
             <a class="top-nav-dropdown-button" ng-click="toggleMenus(0)">About</a>
             <ul class="top-nav-dropdown" ng-cloak ng-show="menus[0]">
               <li class="top-nav-item"><a ng-href="#/club-history" ng-click="menus[0] = false">Club History</a></li>
@@ -60,14 +63,14 @@
               <li class="top-nav-item"><a ng-href="#/calendar" ng-click="menus[3] = false">Calendar</a></li>
               <li class="top-nav-item"><a ng-href="#events" ng-click="menus[3] = false">Club Events</a></li>
             </ul>
-          </div>
+          </div> -->
           <div class="top-nav-section">
             <a class="top-nav-dropdown-button contact-nav" ng-href="#/contact" ng-click="toggleMenus('closeAll')">Contact</a>
           </div>
         </nav>
-        <!-- <nav class="top-nav">
+        <nav class="top-nav">
           <nav-menu/>
-        </nav> -->
+        </nav>
         <a class="mobile-nav-button" ng-click="mobileNav = true"></a>
         <nav class="mobile-nav" ng-show="mobileNav">
           <div class="mobile-nav-container">
@@ -181,8 +184,10 @@
     <script src="scripts/page.js"></script>
 
 
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
@@ -192,8 +197,11 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
     <!-- endbower -->
-    <!-- endbuild -->
+    <!-- endbuild -->    
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -202,12 +210,5 @@
         <script src="scripts/services/getposts.js"></script>
         <!-- endbuild -->
 
-    <script>
-    // Hides menu dropdown when document is clicked outside of open dropdown
-    $(document).on('click',function(e) {
-      $('.top-nav-dropdown').removeClass('top-nav-visible');
-      $('.top-nav-section').removeClass('rotate-caret');
-    });
-    </script>
 </body>
 </html>

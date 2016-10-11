@@ -20,6 +20,8 @@
 
 angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts) {
 
+    $scope.eventSources = [];
+    
     // Global variables
     $scope.hasNextPage = false;
     $scope.hasPreviousPage = false;
@@ -28,24 +30,26 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.mobileMenus = [ false, false, false, false ];
 
     // Function to open and close a nav menu when clicked
-    $scope.toggleNav = function(index) {
+    $scope.toggleNav = function(index,event) {
       for (var i=0; i<=$scope.menus.length-1; i++) {
         if (i === index) {
-          $scope.menus[i] = !$scope.menus[i];
+          if ($scope.menus[i] == false) {
+            $scope.menus[i] = true;
+          }
 
+          else {$scope.menus[i] = false;}
 
+          // $scope.menus[i] = !$scope.menus[i];
         } else {$scope.menus[i] = false;}
-
-
-
       }
-
+      event.stopPropagation();
     };
 
-    $scope.closeNav = function() {
+    $scope.closeNav = function(e) {
       for (var i=0; i<=$scope.menus.length-1; i++) {
         $scope.menus[i] = false;
       }
+      e.stopPropagation();
     };
 
     // Array and objects to define nav menus
@@ -130,7 +134,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
-      console.log('yo');
       if (pageNumber+2 >= posts.length) {
         $scope.hasNextPage = false;
       } else {
@@ -212,9 +215,6 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         // Clears title and content containers on successful post submission
         document.getElementById('$new_post_title').value='';
         document.getElementById('$new_post_content').value='';
-
-
-
 
       });
     };

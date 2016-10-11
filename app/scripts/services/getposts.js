@@ -8,7 +8,7 @@
  * Factory in the feedmeApp.
  */
 angular.module('feedMeMoreApp')
-  .factory('allPosts', function ($http) {
+  .factory('allPosts',function ($http) {
 
     return {
 
@@ -114,14 +114,19 @@ angular.module('feedMeMoreApp').directive('navMenu',function() {
       link: function(scope,elem,attrs) {
 
           // Closes nav when a user clicks outside of a menu
-          $(document).on('click', function(e){
-            if (elem !== e.target && !elem[0].contains(e.target)) {
-              scope.closeNav();
-            }
-          });
+          // $(document).on('click', function(e){
+          //   // e.stopPropagation();
+          //   if (elem !== e.target && !elem[0].contains(e.target)) {
+          //     for (var i=0; i<=scope.menus.length-1; i++) {
+          //       scope.menus[i] = false;
+          //     }
+          //   }
+          //
+          // });
       }
     };
   });
+
 
  // angular.module('feedMeMoreApp').directive('stopEvent', function () {
  //   return {
