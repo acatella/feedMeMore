@@ -355,7 +355,7 @@ tr:nth-child(odd) {
 }
 
 .spacer {
-  height: 340px;
+  height: 490px;
   background: #dce5eb;
 }
 
@@ -386,18 +386,18 @@ tr:nth-child(odd) {
 }
 
 .calendar-plugin {
-  display:none;
-  height: 450px;
-  border-top: 2px solid #cfd6dc;
+  width: 500px;
+  margin-left:30px;
+  float: right;
+  border-left: 2px solid #cfd6dc;
 }
 
 /* ABOUT
 --------------------------- */
 
 .about {
-  display: block;
   background: #fff;
-  padding: 80px 70px;
+  padding: 70px 70px;
   height: 100%;
   color: #76797e;
 }

@@ -1,4 +1,11 @@
-<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
       <section class="splash-img">
         <div class="title-container">
@@ -7,18 +14,20 @@
         </div>
       </section>
       <div class="calendar-container ">
-        <div class="about">
-          <h2 class="about-title">About the Club</h2>
-          <span class="wave-icon"></span>
-          <p class="hero-text">
-            <span class="drop-cap">V</span>
-            iew Ridge Swim &amp; Tennis Club was established in 1958 as member-owned club where families could gather to enjoy swimming, friendships, and other activities. There are currently 480 member families.  As a seasonal club, we are open annually from the middle of May until early September. The club offers organized programs including a
-            <a ng-href="#/swim-team">Swim Team</a>, <a ng-href="#/tennis-team">Tennis Team</a>, <a ng-href="#/waterpolo">Water Polo Team</a>, an <a ng-href="#/adult-swim">Adult Swim Team</a>, as well as <a ng-href="#/swim-lessons">Swim</a> and <a ng-href="#/tennis-lessons">Tennis</a> lessons (both group and private instruction) during the operating season.  Other activities include Early Morning Lap Swim, Open Swim, and up to three dedicated lap lanes available throughout the operating hours. In addition to recreational activities, the club offers several social activities throughout the summer for members’ children of all ages, families and parents/adult only festivities. </br> If you are interested in membership, you can find out information about the waiting list <a ng-href="#/membership">here</a>, or <a class='email' ng-href="mailto:vrstc@vrstc.org">email vrstc@vrstc.org</a> and your message will be forwarded to the appropriate source.            
-          </p>
-        </div>
+
         <div class="calendar-plugin">
-          <!-- to contain wordpress calendar plugin, positioned absolutely above header image and page title -->
+          <div class="fb-page" data-href="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/" data-tabs="timeline" data-small-header="true" data-width="500" data-height="730" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/"></a></blockquote></div>
         </div>
+
+      <div class="about">
+        <h2 class="about-title">About the Club</h2>
+        <span class="wave-icon"></span>
+        <p class="hero-text">
+          <span class="drop-cap">V</span>
+          iew Ridge Swim &amp; Tennis Club was established in 1958 as a member-owned club where families could gather to enjoy swimming, friendships, and other activities. There are currently 480 member families.  As a seasonal club, we are open annually from the middle of May until early September. The club offers organized programs including a
+          <a ng-href="#/swim-team">Swim Team</a>, <a ng-href="#/tennis-team">Tennis Team</a>, <a ng-href="#/waterpolo">Water Polo Team</a>, an <a ng-href="#/adult-swim">Adult Swim Team</a>, as well as <a ng-href="#/swim-lessons">Swim</a> and <a ng-href="#/tennis-lessons">Tennis</a> lessons (both group and private instruction) during the operating season.  Other activities include Early Morning Lap Swim, Open Swim, and up to three dedicated lap lanes available throughout the operating hours. In addition to recreational activities, the club offers several social activities throughout the summer for members’ children of all ages, families and parents/adult only festivities. </br> If you are interested in membership, you can find out information about the waiting list <a ng-href="#/membership">here</a>, or <a class='email' ng-href="mailto:vrstc@vrstc.org">email vrstc@vrstc.org</a> and your message will be forwarded to the appropriate source.
+        </p>
+      </div>
       </div>
       <section class="spacer">
         <!-- empty section with blue background to create space for calendar -->
