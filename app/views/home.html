@@ -1,11 +1,3 @@
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
       <section class="splash-img">
         <div class="title-container">
@@ -16,7 +8,7 @@
       <div class="calendar-container ">
 
         <div class="calendar-plugin">
-          <div class="fb-page" data-href="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/" data-tabs="timeline" data-small-header="true" data-width="500" data-height="730" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/View-Ridge-Swim-and-Tennis-Club-481904695229985/"></a></blockquote></div>
+          <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FView-Ridge-Swim-and-Tennis-Club-481904695229985%2F&tabs=timeline&width=500&height=730&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="500" height="730" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </div>
 
       <div class="about">
@@ -45,8 +37,7 @@
           <div class="ch-post" ng-repeat="post in threePosts">
             <h3>{{post.node.title}}</h3>
             <span class="clock-icon"></span><span class="ch-date">{{post.node.createdAt | date:shortDate}}</span>
-            <p class="hero-text ch-post-content">
-              {{post.node.content}}
+            <p class="hero-text ch-post-content" ng-bind-html="post.node.content">
             </p>
           </div>
           <div class="arrow-containers">

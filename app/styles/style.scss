@@ -193,13 +193,19 @@ a:hover {
 }
 
 .generic-splash {
-  background: url("../images/pool-wide.jpg");
+  background: url("../images/vrstc-night4.jpg");
   background-size:cover;
   background-position: center;
 }
 
 .generic-splash-alt {
-  background: url("../images/panorama.jpg");
+  background: url("../images/vrstc-night4.jpg");
+  background-size:cover;
+  background-position: center;
+}
+
+.tennis-splash {
+  background: url("../images/vrstc-night4.jpg");
   background-size:cover;
   background-position: center;
 }
@@ -236,7 +242,7 @@ a:hover {
 
 .sub-page-splash {
   height: 315px;
-  padding-top: 137.5px;
+  padding-top: 142px;
   text-align: center;
 }
 
@@ -320,8 +326,8 @@ tr:nth-child(odd) {
 --------------------------- */
 
 .splash-img {
-  height: 800px;
-  background: url("../images/pool-in-sun.jpg");
+  height: 798px;
+  background: url("../images/pool-in-sun4.jpg");
   background-size: cover;
   background-position:center;
   color: #fff;
@@ -739,6 +745,10 @@ tr:nth-child(odd) {
   position: absolute;
   left: 0px;
   top: 12px;
+}
+
+li.bl-item.sub-item {
+  margin-left: 40px;
 }
 
 /* SWIM TEAM FACEBOOK EMBED

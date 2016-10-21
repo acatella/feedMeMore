@@ -26,8 +26,8 @@
         <h4 class="old-post-date">Posted: {{post.node.createdAt | date:shortDate}}</h4>
       </div>
       <div class="old-post-content-container" ng-show="shown">
-        <p class="old-post-content {{post.contentVis}}">
-          {{post.node.content}}
+        <p class="old-post-content {{post.contentVis}}" ng-bind-html="post.node.content">
+
         </p>
         <a class="multi-button">
           <!-- <span class="edit-button">Edit</span> -->
