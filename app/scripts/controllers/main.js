@@ -73,10 +73,11 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
               "header": "Board of Directors",
               "linkAddress": "board"
             },
-            {
-              "header": "Staff",
-              "linkAddress": "staff"
-            }
+            // Staff page not ready for launch
+            // {
+            //   "header": "Staff",
+            //   "linkAddress": "staff"
+            // }
           ]
         },
           {
