@@ -106,6 +106,7 @@ angular.module('feedMeMoreApp')
 
   });
 
+// Desktop Nav directive
 angular.module('feedMeMoreApp').directive('navMenu',function() {
     return {
       restrict: 'AE',
@@ -125,6 +126,15 @@ angular.module('feedMeMoreApp').directive('navMenu',function() {
           // });
       }
     };
+  });
+
+  // Mobile Nav directive
+  angular.module('feedMeMoreApp').directive('mobileNavMenu',function(){
+    return {
+      restrict: 'AE',
+      replace: 'false',
+      templateUrl: 'scripts/directives/mobileNavMenuTemplate.html'
+    }
   });
 
 
