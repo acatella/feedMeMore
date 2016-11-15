@@ -28,7 +28,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     var pageNumber = 0;
     $scope.menus = [ false, false, false, false ];
     $scope.mobileMenus = [ false, false, false, false ];
-
+    $scope.mobileMenuFull = false;
     // Function to open and close a nav menu when clicked
     $scope.toggleNav = function(index,event) {
       for (var i=0; i<=$scope.menus.length-1; i++) {

@@ -1,0 +1,6 @@
+<div class="mobile-nav-section" ng-repeat="menu in menuItems">
+  <a class="mobile-nav-dropdown-button" ng-click="toggleMobileMenus($index)">{{menu.title}}</a>
+  <ul class="mobile-nav-dropdown" ng-show="mobileMenus[$index]">
+    <li class="mobile-nav-item"><a ng-repeat="item in menu.listItems" ng-click="$parent.$parent.mobileMenuFull = false; mobileMenus[$parent.$index] = false" href="#/{{item.linkAddress}}">{{item.header}}</a></li>
+  </ul>
+</div>
