@@ -315,6 +315,19 @@ tr:nth-child(odd) {
   background: #fbfbfb;
 }
 
+.coach-table {
+  width: 100%;
+}
+
+.coach-table tr {
+  border-right: 1px solid #cfd6dc;
+}
+
+.coach-table .email-cell {
+  text-align: right;
+  padding-right: 30px;
+}
+
 /* HOME PAGE
 -------------------------------------------------------------------------------- */
 
@@ -638,7 +651,7 @@ tr:nth-child(odd) {
   width: 46%;
   max-width: 525px;
   display: inline-block;
-  border: 1px solid #cfd6dc;
+  // border: 1px solid #cfd6dc; Adds double border on coach tables - Removing until coach photos are ready
   float: right;
 }
 
