@@ -135,8 +135,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
-      if (pageNumber+3 >= posts.length) {
-        console.log(posts.length);
+      if (pageNumber+3 >= posts.length) {        
         $scope.hasNextPage = false;
       } else {
         $scope.hasNextPage = true;
