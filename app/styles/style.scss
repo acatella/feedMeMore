@@ -1634,18 +1634,28 @@ section.sub-footer {
 
 .footer-logo {
   height: 55px;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 
 .phone-number {
-  margin: 2px 0 15px;
+  margin: 2px 0 4px;
 }
 
+.footer-email {
+  margin-bottom: 15px;
+}
+
+.footer-email a {
+  color: #acb6c0;
+}
 .main-footer .footer-contact,
 .main-footer .footer-hours {
   line-height: 25px;
 }
 
+.footer-hours {
+  margin-bottom: 15px;
+}
 .footer-contact {
   min-width: 225px;
 }
