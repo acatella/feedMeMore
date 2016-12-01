@@ -174,7 +174,7 @@ a:hover {
   display: block;
   width: 50px;
   height: 5px;
-  background: url('../images/wavy-lines-sprite.png');
+  background: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615862/wavy-lines-sprite.a17cd4c1_owzb4s.png');
   background-position: 0 5px;
   background-size: 100%;
   top: 10px;
@@ -435,7 +435,7 @@ tr:nth-child(odd) {
 }
 .white-arrow {
   display: inline-block;
-  background: url('../images/white-arrow.png');
+  background: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615862/white-arrow.6beeab3b_euagii.png');
   height: 20px;
   width: 25px;
   background-size: 100%;
@@ -509,7 +509,7 @@ tr:nth-child(odd) {
 .pc-button {
   height: 30px;
   width: 30px;
-  background: url('../images/right-chevron-circle.png');
+  background: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615861/right-chevron-circle.e0aba6ec_rw4sdb.png');
   background-size: 100% 100%;
   display: inline-block;
 }
@@ -538,7 +538,7 @@ tr:nth-child(odd) {
 }
 
 .clock-icon {
-  background-image: url('../images/clock-icon.png');
+  background-image: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615861/clock-icon.7c92fd86_swhbs1.png');
   background-size: 100%;
   width: 17px;
   height: 17px;
@@ -1170,10 +1170,6 @@ ol.order-list .hidden { /* hides all but set number of rules per section */
 /* WATER POLO PAGE
 -------------------------------------------------------------------------------- */
 
-.polo-splash {
-  background-image: url('../images/vrstc-background-waterpolo.jpg');
-}
-
 .polo-links {
   margin-top: 60px;
 }
@@ -1418,7 +1414,7 @@ header .logo img {
   height: 100%;
   top: 0;
   left: 0;
-  background: url('../images/down-chevron-blue.png') no-repeat;
+  background: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615861/down-chevron-blue.247ecbd9_wnsxgq.png') no-repeat;
   background-position: 92% 37px;
   background-size: 12px 6px;
   -moz-transition: transform .3s;
@@ -1740,7 +1736,7 @@ iframe {
 .back-button {
   display: inline-block;
   position: relative;
-  background: url('../images/blue-arrow.png');
+  background: url('http://res.cloudinary.com/drdgylwuu/image/upload/v1480615861/blue-arrow.71785d05_zwlfco.png');
   height: 12px;
   width: 15px;
   background-size: 100%;
