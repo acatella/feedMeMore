@@ -29,6 +29,19 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.menus = [ false, false, false, false ];
     $scope.mobileMenus = [ false, false, false, false ];
     $scope.mobileMenuFull = false;
+
+    // Site Document Locations
+    $scope.siteDocuments = {
+      "clubRecords": "https://drive.google.com/open?id=0B5wq788EginlYmpROHRyMHo2VFU",
+      "leagueRecords": "https://drive.google.com/open?id=0B5wq788EginlLUZ2MndtXzdlTDQ",
+      "waitlist":"https://drive.google.com/open?id=0B5wq788EginlTFE0Qk1PSFhWZ3M",
+      "waitlistApplication":"https://drive.google.com/open?id=0B5wq788EginlNWhSeUIwWDdnRjg",
+      "concussionForm":"https://drive.google.com/open?id=0B5wq788EginlNzZsOE5XWnRtd28",
+      "participationForm":"https://drive.google.com/open?id=0B5wq788EginlRWlhb1pScG9KdzA",
+      "missingMeetForm":"https://drive.google.com/open?id=0B5wq788EginlNG5vUTJ5b0IzcnM",
+      "articlesInc":"https://drive.google.com/open?id=0B5wq788EginlazNjRFA4VTRnRlk",
+      "bylaws":"https://drive.google.com/open?id=0B5wq788EginlcUtmTzFTeUp0ZVE",
+    };
     // Function to open and close a nav menu when clicked
     $scope.toggleNav = function(index,event) {
       for (var i=0; i<=$scope.menus.length-1; i++) {
@@ -135,7 +148,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Methods to determine when to show prev/next buttons
     function showNextButton(posts) {
-      if (pageNumber+3 >= posts.length) {        
+      if (pageNumber+3 >= posts.length) {
         $scope.hasNextPage = false;
       } else {
         $scope.hasNextPage = true;
