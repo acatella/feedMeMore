@@ -42,6 +42,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       "articlesInc":"https://drive.google.com/open?id=0B5wq788EginlazNjRFA4VTRnRlk",
       "bylaws":"https://drive.google.com/open?id=0B5wq788EginlcUtmTzFTeUp0ZVE",
     };
+    
     // Function to open and close a nav menu when clicked
     $scope.toggleNav = function(index,event) {
       for (var i=0; i<=$scope.menus.length-1; i++) {

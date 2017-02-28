@@ -35,8 +35,7 @@ angular.module('feedMeMoreApp')
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
-            console.log("That was easy!");
-            console.log(result);
+
         });
 
       },
@@ -49,9 +48,6 @@ angular.module('feedMeMoreApp')
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
-            console.log("That was easy!");
-            console.log(result);
-
             return result;
         });
 
@@ -65,8 +61,6 @@ angular.module('feedMeMoreApp')
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
-            console.log("That was easy!");
-            console.log(result);
 
             return result;
         });
@@ -80,8 +74,6 @@ angular.module('feedMeMoreApp')
         };
 
         return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
-            console.log("That was easy!");
-            console.log(result);
 
             return result;
         });
@@ -94,9 +86,7 @@ angular.module('feedMeMoreApp')
             variables: {"input_0": {"id" : postID}}
         };
 
-        return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
-            console.log("That was easy!");
-            console.log(result);
+        return $http.post("https://api.scaphold.io/graphql/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {                        
 
             return result;
         });
