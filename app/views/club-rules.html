@@ -68,16 +68,13 @@
         <h2>Tennis Court Rules - Summer</h2>
         <span class="wave-icon"></span>
         <ol class="order-list">
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Courts are for use by Members only. Members may invite a guest, but no guests may use the court without a Member present. Tennis guests are guests of the overall Club, and the same Guest Fees and policies apply even if they don’t use the pool or enjoy the grounds areas. Please register them at the main office before you start playing.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Reservation and play will be in one-hour periods starting on the hour except as noted in 3. Reservations must be made by telephone or in person at the pool office during operating hours.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Both members and guests must be signed in at the pool office prior to play.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Courts are for use by Members only. Members may invite a guest, but no guests may use the court without a Member present. Guests are welcome on the courts on the same basis as in the pool. If playing with a guest, the guest must be registered at the front office and a guest charge recorded at the time of the registration.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Reservation and play will be in one-hour periods starting on the hour except as noted in Rule #4. Reservations must be made by telephone or in person at the pool office during operating hours.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A tennis doubles foursome may sign up for two consecutive hours of court time when a court is available.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A Member who is unable to keep a reservation shall notify the pool office as soon as possible so that another person may reserve the court.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A member who is unable to keep a reservation shall notify the pool office as soon as possible so that another person may reserve the court.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Failure to be present within 10 minutes after the start of the reserved period forfeits the reservation.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">The courts are held for adults-only reservations from 7:00 am - 8:00 am Monday through Saturday, from 5:00 pm to closing on Monday through Friday and from 12:00 noon Saturday until closing on Sunday.</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">During adults-only periods, the courts may be reserved only for adults or adults with their children. During these periods, children may play if courts are unoccupied but must yield to adults who appear and wish to play.</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">During times when courts are not reserved for group tennis lessons or tennis teams, one court only will be reserved for tennis lessons as demand dictates. When not in use for lessons, this court will be available for play.</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">"Adult" means an individual 17 years of age or over.</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">A Member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played.</span></li>
+          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">A member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Players must wear tennis shoes. Hard-soled shoes, shoes with any kind of heel, or shoes with soles which mark up the court are not permitted.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">No food, beverages, or smoking shall be allowed on the courts.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Proper tennis attire is recommended.</span></li>
@@ -85,8 +82,9 @@
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">After completing play, players must make sure that all gates to the tennis courts are closed when no one is waiting to play. After completing night play, players should turn off the lights on the court.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">The tennis backboard is available without reservation on a first-come, first-serve basis.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">You must be 16 to use the ball machine (unless accompanied by an adult).</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">No private lessons are allowed, except through Coach Ron, or his tennis staff. If you want to take a private lesson, please talk to Coach Ron.</span></li>
-          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts.</span></li>
+          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Only authorized tennis staff can teach private lessons, which must go through the usual procedures for payment.</span></li>
+          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts. Courts are for tennis only, no soccer, basketball etc..</span></li>
+          <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Tennis court hours are 6:00am-10:00pm</span></li>
           <div class="view-all {{trButtonPosition}}">
             <a class="button view-all-button" ng-click="trShown = !trShown; updateTrButton()">{{trButtonText}}</a>
           </div>
@@ -98,10 +96,11 @@
         <h2>Tennis Court Rules - Off Season</h2>
         <ol ng-init="!shown" class="order-list">
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">When the swim club pool office reservation system is not in operation, reservation sheets will be provided at the courts for Members to make their own reservations on a first-come, first served basis.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Courts are for use by Members only. Members may invite a guest, but no guests may use the court without a Member present.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Reservation and play will be in one hour periods starting on the hour.</span></li>
           <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Failure to be present within 10 minutes after the start of the reserved period forfeits the reservation.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A Member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played. Except as provided in 2, Members may not reserve two consecutive hours for doubles, but if the court is vacant after one hour of play, the players may sign up for a second hour.</span></li>
-          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">Players must wear tennis shoes. hard-soled shoes, shoes with any kind of heel, or shoes with soles which mark up the court are not permitted.</span></li>
+          <li class="ol-item"><span class="ol-item-bg"></span><span class="hero-text">A Member may make only one advance reservation not more than one week in advance and may not make another reservation until that one has been played.</span></li>
+          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Players must wear tennis shoes. Hard-soled shoes, shoes with any kind of heel, or shoes with soles which mark up the court are not permitted.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">No food, beverages, or smoking shall be allowed on the courts.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Proper tennis attire is recommended.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The use of radios in and around the tennis courts is not permitted.</span></li>
@@ -109,7 +108,7 @@
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The tennis backboard is available without reservation on a first-come, first-serve basis.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">No private lessons are allowed, except through Coach Ron, or his tennis staff. If you want to take a private lesson, please talk to Coach Ron.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts. And no soccer, basketball, etc.</span></li>
-          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The ball machine is not available during the off-season.</span></li>
+          <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The ball machine is not available during the off season (November-May).</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please remember lights-out at 10pm. Thank you!</span></li>
           <div class="view-all {{tcrButtonPosition}}">
             <a class="button view-all-button" ng-click="tcrShown = !tcrShown; updateTcrButton()">{{tcrButtonText}}</a>
