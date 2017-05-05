@@ -38,11 +38,12 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       "waitlistApplication":"https://drive.google.com/open?id=0B5wq788EginlNWhSeUIwWDdnRjg",
       "concussionForm":"https://drive.google.com/open?id=0B5wq788EginlNzZsOE5XWnRtd28",
       "participationForm":"https://drive.google.com/open?id=0B5wq788EginlRWlhb1pScG9KdzA",
-      "missingMeetForm":"https://drive.google.com/open?id=0B5wq788EginlNG5vUTJ5b0IzcnM",
+      "missingMeetForm":"http://res.cloudinary.com/drdgylwuu/image/upload/v1493851999/2017_missing_meet_o6sg8k.pdf",
       "articlesInc":"https://drive.google.com/open?id=0B5wq788EginlazNjRFA4VTRnRlk",
       "bylaws":"https://drive.google.com/open?id=0B5wq788EginlcUtmTzFTeUp0ZVE",
+      "meetingFlyer": "http://res.cloudinary.com/drdgylwuu/image/upload/v1493851999/2017_meeting_flyer_mqwqdp.pdf"
     };
-    
+
     // Function to open and close a nav menu when clicked
     $scope.toggleNav = function(index,event) {
       for (var i=0; i<=$scope.menus.length-1; i++) {
@@ -279,6 +280,50 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         $scope.mobileMenus[menuItem] = true;
       }
     };
+
+    // Button positioning on club rules page
+    $scope.buttonPosition = {
+      "general" : {
+        "name" : "general",
+        "position" : "absolute",
+        "text" : "View All Rules"
+      },
+      "pool" : {
+        "name" : "pool",
+        "position" : "absolute",
+        "text" : "View All Rules"
+      },
+      "tennisCourtSummer" : {
+        "name" : "tennisCourtSummer",
+        "position" : "absolute",
+        "text" : "View All Rules"
+      },
+      "tennisCourtOffSeason" : {
+        "name" : "tennisCourtOffSeason",
+        "position" : "absolute",
+        "text" : "View All Rules"
+      },
+      "guestPolicy" : {
+        "name" : "guestPolicy",
+        "position" : "absolute",
+        "text" : "View All Rules"
+      }
+    };
+
+    // Better way to do it
+    $scope.changeButtonPosition = function(button) {
+      console.log();
+      if ($scope.buttonPosition[button].position == "absolute") {
+        $scope.buttonPosition[button].position = "relative";
+        $scope.buttonPosition[button].text = "Hide Rules";
+      }
+      else {
+        $scope.buttonPosition[button].position = "absolute";
+        $scope.buttonPosition[button].text = "View All Rules";
+      }
+
+      return this;
+    }
 
     // Alters club rules button text and positioning
     $scope.gpButtonPosition = "absolute";
