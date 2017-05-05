@@ -280,119 +280,60 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         $scope.mobileMenus[menuItem] = true;
       }
     };
+    
 
-    // Button positioning on club rules page
-    $scope.buttonPosition = {
-      "general" : {
-        "name" : "general",
-        "position" : "absolute",
-        "text" : "View All Rules"
-      },
-      "pool" : {
-        "name" : "pool",
-        "position" : "absolute",
-        "text" : "View All Rules"
-      },
-      "tennisCourtSummer" : {
-        "name" : "tennisCourtSummer",
-        "position" : "absolute",
-        "text" : "View All Rules"
-      },
-      "tennisCourtOffSeason" : {
-        "name" : "tennisCourtOffSeason",
-        "position" : "absolute",
-        "text" : "View All Rules"
-      },
-      "guestPolicy" : {
-        "name" : "guestPolicy",
-        "position" : "absolute",
-        "text" : "View All Rules"
-      }
+    // Alters club rules button text and positioning on click
+    function clubRules() {
+
+      var buttonPosition = {
+        "general" : {
+          "name" : "general",
+          "pos" : "absolute",
+          "text" : "View All Rules"
+        },
+        "pool" : {
+          "name" : "pool",
+          "pos" : "absolute",
+          "text" : "View All Rules"
+        },
+        "tennisCourtSummer" : {
+          "name" : "tennisCourtSummer",
+          "pos" : "absolute",
+          "text" : "View All Rules"
+        },
+        "tennisCourtOffSeason" : {
+          "name" : "tennisCourtOffSeason",
+          "pos" : "absolute",
+          "text" : "View All Rules"
+        },
+        "guestPolicy" : {
+          "name" : "guestPolicy",
+          "pos" : "absolute",
+          "text" : "View All Rules"
+        }
+      };
+
+
+      return {
+        getButtonPostition: function(button) {
+          return buttonPosition[button].pos;
+        },
+        getButtonText: function(button) {
+          return buttonPosition[button].text;
+        },
+        updateButton: function(button) {
+          if (buttonPosition[button].pos == "absolute") {
+            buttonPosition[button].pos = "relative";
+            buttonPosition[button].text = "Hide Rules";
+          }
+          else {
+            buttonPosition[button].pos = "absolute";
+            buttonPosition[button].text = "View All Rules";
+          }
+        }
+      };
     };
 
-    // Better way to do it
-    $scope.changeButtonPosition = function(button) {
-      console.log();
-      if ($scope.buttonPosition[button].position == "absolute") {
-        $scope.buttonPosition[button].position = "relative";
-        $scope.buttonPosition[button].text = "Hide Rules";
-      }
-      else {
-        $scope.buttonPosition[button].position = "absolute";
-        $scope.buttonPosition[button].text = "View All Rules";
-      }
+    $scope.ClubRulesButton = clubRules();
 
-      return this;
-    }
-
-    // Alters club rules button text and positioning
-    $scope.gpButtonPosition = "absolute";
-    $scope.gpButtonText = "View All Rules";
-    $scope.updateGpButton = function() {
-      if ($scope.gpButtonPosition == "absolute") {
-        $scope.gpButtonPosition = "relative";
-        $scope.gpButtonText = "Hide Rules";
-      }
-      else {
-        $scope.gpButtonPosition = "absolute";
-        $scope.gpButtonText = "View All Rules";
-      }
-
-    };
-
-    $scope.tcrButtonPosition = "absolute";
-    $scope.tcrButtonText = "View All Rules";
-    $scope.updateTcrButton = function() {
-      if ($scope.tcrButtonPosition == "absolute") {
-        $scope.tcrButtonPosition = "relative";
-        $scope.tcrButtonText = "Hide Rules";
-      }
-      else {
-        $scope.tcrButtonPosition = "absolute";
-        $scope.tcrButtonText = "View All Rules";
-      }
-
-    };
-
-    $scope.trButtonPosition = "absolute";
-    $scope.trButtonText = "View All Rules";
-    $scope.updateTrButton = function() {
-      if ($scope.trButtonPosition == "absolute") {
-        $scope.trButtonPosition = "relative";
-        $scope.trButtonText = "Hide Rules";
-      }
-      else {
-        $scope.trButtonPosition = "absolute";
-        $scope.trButtonText = "View All Rules";
-      }
-
-    };
-
-    $scope.prButtonPosition = "absolute";
-    $scope.prButtonText = "View All Rules";
-    $scope.updatePrButton = function() {
-      if ($scope.prButtonPosition == "absolute") {
-        $scope.prButtonPosition = "relative";
-        $scope.prButtonText = "Hide Rules";
-      }
-      else {
-        $scope.prButtonPosition = "absolute";
-        $scope.prButtonText = "View All Rules";
-      }
-
-    };
-
-    $scope.crButtonPosition = "absolute";
-    $scope.crButtonText = "View All Rules";
-    $scope.updateCrButton = function() {
-      if ($scope.crButtonPosition == "absolute") {
-        $scope.crButtonPosition = "relative";
-        $scope.crButtonText = "Hide Rules";
-      }
-      else {
-        $scope.crButtonPosition = "absolute";
-        $scope.crButtonText = "View All Rules";
-      }
-
-    };
 });

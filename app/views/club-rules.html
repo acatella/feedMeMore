@@ -32,8 +32,8 @@
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">The staff has the right to restrict any activity they consider unsafe.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Only authorized staff may teach private lessons (swimming or tennis), which must go through the usual procedures for payment.</span></li>
           <li class="ol-item" ng-show="crShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the Club rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a Member for a period of time not exceeding three months, or may expel a Member.)</span></li>
-          <div class="view-all {{buttonPosition.general.position}}">
-            <a class="button view-all-button" ng-click="crShown = !crShown; changeButtonPosition(buttonPosition.general.name)">{{buttonPosition.general.text}}</a>
+          <div class="view-all {{ClubRulesButton.getButtonPostition('general')}}">
+            <a class="button view-all-button" ng-click="crShown = !crShown; ClubRulesButton.updateButton('general')">{{ClubRulesButton.getButtonText('general')}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -57,8 +57,8 @@
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">No "horse play" in or out of the water. This includes riding on shoulders, throwing children, or unsafe stunts from the side of the pool.</span></li>
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">No hanging on the basketball rims.</span></li>
           <li class="ol-item" ng-show="prShown"><span class="ol-item-bg"></span><span class="hero-text">Anyone refusing to obey the pool rules is subject to removal from the premises. The manager will, as soon as possible, contact parents to determine the nature of the suspension and set expectations for future behavior. (Serious or repeated violations will be referred to the Board for additional action. The Board of Trustees may for cause, suspend a Member for a period of time not exceeding three months, or may expel a Member).</span></li>
-          <div class="view-all {{buttonPosition.pool.position}}">
-            <a class="button view-all-button" ng-click="prShown = !prShown; changeButtonPosition(buttonPosition.pool.name)">{{buttonPosition.pool.text}}</a>
+          <div class="view-all {{ClubRulesButton.getButtonPostition('pool')}}">
+            <a class="button view-all-button" ng-click="prShown = !prShown; ClubRulesButton.updateButton('pool')">{{ClubRulesButton.getButtonText('pool')}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -85,8 +85,8 @@
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Only authorized tennis staff can teach private lessons, which must go through the usual procedures for payment.</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts. Courts are for tennis only, no soccer, basketball etc..</span></li>
           <li class="ol-item" ng-show="trShown"><span class="ol-item-bg"></span><span class="hero-text">Tennis court hours are 6:00am-10:00pm</span></li>
-          <div class="view-all {{buttonPosition.tennisCourtSummer.position}}">
-            <a class="button view-all-button" ng-click="trShown = !trShown; changeButtonPosition(buttonPosition.tennisCourtSummer.name)">{{buttonPosition.tennisCourtSummer.text}}</a>
+          <div class="view-all {{ClubRulesButton.getButtonPostition('tennisCourtSummer')}}">
+            <a class="button view-all-button" ng-click="trShown = !trShown; ClubRulesButton.updateButton('tennisCourtSummer')">{{ClubRulesButton.getButtonText('tennisCourtSummer')}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -110,8 +110,8 @@
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please help keep our court surface in good condition! NO dogs, scooters, bikes, skateboards, roller skates, or roller blades allowed on the courts. And no soccer, basketball, etc.</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">The ball machine is not available during the off season (November-May).</span></li>
           <li class="ol-item" ng-show="tcrShown"><span class="ol-item-bg"></span><span class="hero-text">Please remember lights-out at 10pm. Thank you!</span></li>
-          <div class="view-all {{buttonPosition.tennisCourtOffSeason.position}}">
-            <a class="button view-all-button" ng-click="tcrShown = !tcrShown; changeButtonPosition(buttonPosition.tennisCourtOffSeason.name)">{{buttonPosition.tennisCourtOffSeason.text}}</a>
+          <div class="view-all {{ClubRulesButton.getButtonPostition('tennisCourtOffSeason')}}">
+            <a class="button view-all-button" ng-click="tcrShown = !tcrShown; ClubRulesButton.updateButton('tennisCourtOffSeason')">{{ClubRulesButton.getButtonText('tennisCourtOffSeason')}}</a>
           </div>
         </ol>
       </div> <!-- content container -->
@@ -130,8 +130,8 @@
           <li class="ol-item" ng-show="gpShown"><span class="ol-item-bg"></span><span class="hero-text">Member's children who are not living at the Member’s home are subject to guest fees and rules.</span></li>
           <li class="ol-item" ng-show="gpShown"><span class="ol-item-bg"></span><span class="hero-text">Babysitters can use the pool without charge if they are registered in the office and only if they are with the Member child or children. The babysitter's children are considered as guests and must pay the usual guest fees.</span></li>
           <li class="ol-item" ng-show="gpShown"><span class="ol-item-bg"></span><span class="hero-text">In the case of divorce or permanent separation the partner who does not retain the membership can use the facility free of charge so long as the children of the partnership are present.</span></li>
-          <div class="view-all {{buttonPosition.guestPolicy.position}}">
-            <a class="button view-all-button" ng-click="gpShown = !gpShown; changeButtonPosition(buttonPosition.guestPolicy.name)">{{buttonPosition.guestPolicy.text}}</a>
+          <div class="view-all {{ClubRulesButton.getButtonPostition('guestPolicy')}}">
+            <a class="button view-all-button" ng-click="gpShown = !gpShown; ClubRulesButton.updateButton('guestPolicy')">{{ClubRulesButton.getButtonText('guestPolicy')}}</a>
           </div>
         </ol>
       </div>
