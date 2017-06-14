@@ -32,7 +32,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
 
     // Site Document Locations
     $scope.siteDocuments = {
-      "clubRecords": "https://drive.google.com/open?id=0B5wq788EginlYmpROHRyMHo2VFU",
+      "clubRecords": "http://res.cloudinary.com/drdgylwuu/image/upload/v1497453688/VRSTC_Club_Records_2016_1_l0jv73.pdf",
       "leagueRecords": "https://drive.google.com/open?id=0B5wq788EginlLUZ2MndtXzdlTDQ",
       "waitlist":"https://drive.google.com/open?id=0B5wq788EginlTFE0Qk1PSFhWZ3M",
       "waitlistApplication":"https://drive.google.com/open?id=0B5wq788EginlNWhSeUIwWDdnRjg",
@@ -280,7 +280,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         $scope.mobileMenus[menuItem] = true;
       }
     };
-    
+
 
     // Alters club rules button text and positioning on click
     function clubRules() {
