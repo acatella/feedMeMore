@@ -20,7 +20,7 @@ angular
     'ngTouch'
   ])
   .config(function ($routeProvider,$locationProvider) {
-    $locationProvider = '';
+    $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
