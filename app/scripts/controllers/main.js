@@ -227,7 +227,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
         };
 
         // Updates array of posts to reflect new posts in real time
-        // $scope.posts.unshift(newPost);
+        $scope.posts.unshift(newPost);
 
         // Clears title and content containers on successful post submission
         document.getElementById('$new_post_title').value='';
@@ -242,7 +242,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       allPosts.deletePost(postID).then(function(result) {
 
         for (var i=0; i<$scope.posts.length; i++) {
-          if ($scope.posts[i].node.id === result.data.deletePost.changedPost.id) {
+          if ($scope.posts[i].node.id === result.data.data.deletePost.changedPost.id) {
             $scope.posts.splice(i,1);
             break;
           }

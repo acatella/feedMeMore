@@ -47,7 +47,7 @@ angular.module('feedMeMoreApp')
             variables: ""
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
             return result;
         });
 
@@ -60,7 +60,7 @@ angular.module('feedMeMoreApp')
             variables: {"cursor": cursor}
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
 
             return result;
         });
@@ -73,7 +73,7 @@ angular.module('feedMeMoreApp')
             variables: {"cursor": cursor}
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
 
             return result;
         });
@@ -82,11 +82,11 @@ angular.module('feedMeMoreApp')
       deletePost: function(postID) {
 
         var data = {
-            query: 'mutation deletePostQuery($input_0: _DeletePostInput!){ deletePost(input: $input_0){ changedPost { id createdAt modifiedAt title content  } } } ',
-            variables: {"input_0": {"id" : postID}}
+            query: 'mutation DeletePost($delete: DeletePostInput!) { deletePost(input: $delete) { changedPost { id } changedEdge { node { id } } viewer { id } clientMutationId } }',
+            variables: {"delete": {"id" : postID}}
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
 
             return result;
         });
