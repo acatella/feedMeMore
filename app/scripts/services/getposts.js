@@ -15,11 +15,11 @@ angular.module('feedMeMoreApp')
       createPost: function(title,content) {
 
         var data = {
-            query: 'mutation createPostQuery($input_0: _CreatePostInput!){ createPost(input: $input_0){ changedPost { id createdAt modifiedAt title content } } } ',
-            variables: {"input_0": {"title": title,"content" : content }}
+            query: 'mutation CreatePost($create: CreatePostInput!) { createPost(input: $create) { changedPost { content id createdAt title modifiedAt } } }',
+            variables: {"create": {"title": title,"content" : content }}
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
             console.log("That was easy!");
 
             return result;
@@ -34,7 +34,7 @@ angular.module('feedMeMoreApp')
             variables: ""
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/vrstc", data, function(result) {
 
         });
 
@@ -86,7 +86,7 @@ angular.module('feedMeMoreApp')
             variables: {"input_0": {"id" : postID}}
         };
 
-        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {                        
+        return $http.post("https://us-west-2.api.scaphold.io/graphql/alias/76f8d00e-08f8-4590-ad92-5eba957cc42e", data, function(result) {
 
             return result;
         });
