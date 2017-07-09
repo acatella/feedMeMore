@@ -34,7 +34,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.siteDocuments = {
       "clubRecords": "https://drive.google.com/open?id=0B5wq788EginlYmpROHRyMHo2VFU",
       "leagueRecords": "https://drive.google.com/open?id=0B5wq788EginlLUZ2MndtXzdlTDQ",
-      "waitlist":"https://drive.google.com/open?id=0B5wq788EginlTFE0Qk1PSFhWZ3M",
+      "waitlist":"http://res.cloudinary.com/drdgylwuu/image/upload/v1497453896/MemberWaitingList_5-1-2017_fpfbqb.pdf",
       "waitlistApplication":"https://drive.google.com/open?id=0B5wq788EginlNWhSeUIwWDdnRjg",
       "concussionForm":"https://drive.google.com/open?id=0B5wq788EginlNzZsOE5XWnRtd28",
       "participationForm":"https://drive.google.com/open?id=0B5wq788EginlRWlhb1pScG9KdzA",
