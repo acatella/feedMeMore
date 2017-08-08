@@ -42,7 +42,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       "articlesInc":"https://drive.google.com/open?id=0B5wq788EginlazNjRFA4VTRnRlk",
       "bylaws":"https://drive.google.com/open?id=0B5wq788EginlcUtmTzFTeUp0ZVE",
       "meetingFlyer": "http://res.cloudinary.com/drdgylwuu/image/upload/v1493851999/2017_meeting_flyer_mqwqdp.pdf",
-      "waterpoloInfo": "http://res.cloudinary.com/drdgylwuu/image/upload/v1499388597/VRWP.2017.General_Info_cn8bql.pdf",
+      "waterpoloInfo": "http://res.cloudinary.com/drdgylwuu/image/upload/v1502163970/VRWP.2017_Info_2_g0urmq.pdf",
       "adForm": "http://res.cloudinary.com/drdgylwuu/image/upload/v1499811830/VRSTC_Northern_Division_Finals_2017_Advertising_ldoiq0.pdf"
     };
 
