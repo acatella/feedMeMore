@@ -168,8 +168,7 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     }
 
     // Queries db and returns array of all posts in descending chronological order
-    allPosts.getPosts().then(function(data) {
-      console.log(data);
+    allPosts.getPosts().then(function(data) {      
       var posts = data.data.data.viewer.allPosts.edges;
 
       $scope.posts = posts;
@@ -209,15 +208,12 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
       var title = document.getElementById('$new_post_title').value;
       var content = document.getElementById('$new_post_content').value;
       var submitButton = angular.element(document.querySelector('#submit_button'));
-      console.log("title: " + title + ", content: " + content);
       submitButton.removeClass('pulse');
 
       allPosts.createPost(title,content).then(function(result) {
 
         // Animates submit button when post successfully submits
         submitButton.addClass('pulse');
-        console.log(result);
-
 
         // Format data in the way the HTML expects to receive it
         var newPost = {
