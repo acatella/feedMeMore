@@ -34,8 +34,8 @@ angular.module('feedMeMoreApp').controller('MainCtrl',function($scope, allPosts)
     $scope.siteDocuments = {
       "clubRecords": "https://drive.google.com/open?id=0B5wq788EginlYmpROHRyMHo2VFU",
       "leagueRecords": "https://drive.google.com/open?id=0B5wq788EginlLUZ2MndtXzdlTDQ",
-      "waitlist":"http://res.cloudinary.com/drdgylwuu/image/upload/v1497453896/MemberWaitingList_5-1-2017_fpfbqb.pdf",
-      "waitlistApplication":"https://drive.google.com/open?id=0B5wq788EginlNWhSeUIwWDdnRjg",
+      "waitlist":"http://res.cloudinary.com/drdgylwuu/image/upload/v1512237224/VRSTCwaitlistforwebsite11-14-17_pz8ssa.pdf",
+      "waitlistApplication":"http://res.cloudinary.com/drdgylwuu/image/upload/v1512237224/2018waitlistapplication_h4gsln.pdf",
       "concussionForm":"https://drive.google.com/open?id=0B5wq788EginlNzZsOE5XWnRtd28",
       "participationForm":"https://drive.google.com/open?id=0B5wq788EginlRWlhb1pScG9KdzA",
       "missingMeetForm":"http://res.cloudinary.com/drdgylwuu/image/upload/v1493851999/2017_missing_meet_o6sg8k.pdf",
