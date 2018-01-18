@@ -157,7 +157,9 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+span.under {
+  text-decoration: underline;
+}
 .drop-cap {
   float: left;
   font-size: 67px;
